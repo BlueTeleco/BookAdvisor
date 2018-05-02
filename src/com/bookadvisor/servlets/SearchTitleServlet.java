@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.bookadvisor.dao.FichaLibroDAOImplementation;
 import com.bookadvisor.dao.model.FichaLibro;
 
-@WebServlet("/CreateLectorServlet")
+@WebServlet("/SearchTitleServlet")
 public class SearchTitleServlet extends HttpServlet {
 
 	@Override
