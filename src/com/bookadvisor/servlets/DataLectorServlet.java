@@ -32,7 +32,7 @@ public class DataLectorServlet extends HttpServlet {
 		List<Critica> criticas_list_aux = CriticaDAOImplementation.getInstance().getAll();
 		if(criticas_list_aux.size() > 0) {
 			for(Critica c: criticas_list_aux) {
-				if(c.getAutor() == lectorX.getNombre()) {
+				if(c.getAutor().getNombre().equals(lectorX.getNombre())) {
 					criticas_titulo.add(c.getTitulo());
 				}
 			}
