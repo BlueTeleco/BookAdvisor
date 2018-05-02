@@ -35,7 +35,7 @@ public class MiCuentaServlet extends HttpServlet {
 												.collect(Collectors.toList());
 
 			req.getSession().setAttribute("criticas_list", criticas_titulo);
-			resp.sendRedirect(req.getContextPath()+ "/DatosLector.jsp");
+			resp.sendRedirect(req.getContextPath()+ "/micuenta.jsp");
 		} else if (publicista != null) {
 			List<Noticia> noticias_titulo = NoticiaDAOImplementation
 												.getInstance()
@@ -45,7 +45,7 @@ public class MiCuentaServlet extends HttpServlet {
 												.collect(Collectors.toList());
 
 			req.getSession().setAttribute("noticias_list", noticias_titulo);
-			resp.sendRedirect(req.getContextPath()+ "/DatosPublicista.jsp");
+			resp.sendRedirect(req.getContextPath()+ "/micuenta.jsp");
 		}
 	}
 }
