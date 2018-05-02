@@ -15,39 +15,43 @@ import javax.persistence.Id;
 public class Critica implements Serializable {
 	
 	@Id
-	private String autor;
+	private Lector autor;
 	private String titulo;
-	private String texto;
+	private String cuerpo;
+	private String puntuacion;
 	private ArrayList criticas_list;
-	
-
 	
 	public Critica() {
 		this.criticas_list = new ArrayList<>();
 	}
 
-	public String getAutor() {
+	public Lector getAutor() {
 		return this.autor;
 	}
 
 	public String getTexto() {
-		return this.texto;
+		return this.cuerpo;
 	}
 	
 	public String getTitulo() {
 		return this.titulo;
 	}
 	
-	public Critica setTexto(String texto) {
-		this.texto = texto;
+	public Critica setTexto(String cuerpo) {
+		this.cuerpo = cuerpo;
 		return this;
 	}
-	public Critica setAutor(String autor) {
+	public Critica setAutor(Lector autor) {
 		this.autor = autor;
 		return this;
 	}
 	public Critica setTitulo(String titulo) {
 		this.titulo = titulo;
+		return this;
+	}
+
+	public Critica setPuntuacion(String puntuacion) {
+		this.puntuacion = puntuacion;
 		return this;
 	}
 
