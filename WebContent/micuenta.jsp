@@ -51,15 +51,23 @@
       </div>
     </header>
 
-  
-
   <section id="about" >
     </section>
-    <br><br><br>
-    <h4 >Mis datos</h4>
-      <%@ include file = "DatosLector.jsp" %>
-      <%@ include file = "DatosPublicista.jsp" %>
-    <br><br><br>
+    <br><br>
+    
+    
+    <h1 >Mis datos: Modo Lector </h1>
+    
+    <p>Nombre del usuario: <c:out value="${name}"/> ></p>    
+    <p>Email del usuario: <c:out value="${email}"/> </p>
+   	<select name="Criticas">
+	<option value="" disabled selected>Mis críticas:</option>
+	<c:forEach items="${criticas_list}" var="criticai">
+			 <option value="Mis Criticas">${criticai.titulo}</option>
+	</c:forEach>
+	</select>
+     
+    <br><br>
     <h4>Logout</h4>
       <%@ include file = "FormLogout.jsp" %>
     <br><br><br><br><br><br><br><br>
@@ -75,18 +83,6 @@
       </div>
     </footer>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/grayscale.min.js"></script>
 
   </body>
 

@@ -31,7 +31,9 @@
 
     <!-- Navigation -->
   	<%@ include file = "NavigationBar.jsp" %>
+ 
 
+ 	
     <!-- Intro Header -->
     <header class="masthead">
       <div class="intro-body">

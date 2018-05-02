@@ -32,11 +32,11 @@ public class LectorDAOImplementation implements LectorDAO {
 	}
 
 	@Override
-	public Lector read(String titulo){
+	public Lector read(String email){
 		Session session = SessionFactoryService.get().openSession();
 		Lector lector = null;
 		try {
-			lector = session.get(Lector.class, titulo);
+			lector = session.get(Lector.class, email);
 		} catch (Exception e) {
 		} finally {
 			session.close();
