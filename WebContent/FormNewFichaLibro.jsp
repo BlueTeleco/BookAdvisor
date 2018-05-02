@@ -6,7 +6,6 @@
 	<input type="text" name="ISBN" placeholder="ISBN del libro" /> 
 
 	<p>Fecha de publicacion del Libro:</p>
-
 	<input type="text" name="fecha" placeholder="Fecha de publicacion: dd/mm/aaaa"/>
 
 	<p style="color: #013252;" >
@@ -28,13 +27,11 @@
 	</label>
 	</p>
 		
-	<input type="file" name="image" accept="image/*" />
+	<input type="file" name="image" accept="image/*"/>
 	<input type="text" name="resenaEditorial" placeholder="Resena de la editorial" /> 
-
-	<input type="submit" value="crear ficha de libro"></input>
 	
+	<input type="submit" value="crear ficha de libro"></input>
 	<br/>
 	<br/>
-
 
 </form>

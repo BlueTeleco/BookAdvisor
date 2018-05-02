@@ -1,9 +1,19 @@
-<form action="CreateFichaServlet">
-	<p>Nombre: ${lector.name}</p>
-	<p>Email: ${lector.email}</p>
-	<p>Titulo del libro: ${libro.titulo}</p>
+<form action="CreateCriticaServlet">
 
-	<input type="text" name="critica" placeholder="Cr√≠tica del libro..." /> 
-
-	<input type="submit">Crear nueva cr√≠tica</input>
+	<strong>Valorar este libro: </strong>
+	<br/>
+	<span>
+	<input type="radio" name="rating" value="1">&#9733;</input>
+	<input type="radio" name="rating" value="2">&#9733;</input>
+	<input type="radio" name="rating" value="3">&#9733;</input>
+	<input type="radio" name="rating" value="4">&#9733;</input>
+	<input type="radio" name="rating" value="5">&#9733;</input>
+	</span>
+	<br/>
+	<input type="text" name="titulo" placeholder="Titulo de la crÌtica">
+	<br/>
+	<textarea rows="4" cols="50" placeholder="DescripciÛn de la crÌtica..."></textarea>
+	<br/>
+	<input type="submit" value="Crear nueva crÌtica"></input>
+	
 </form>
