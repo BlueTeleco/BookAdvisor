@@ -21,24 +21,14 @@
 			if (cookies != null) {
 				for (int i = 0; i < cookies.length; i++) {
 					if (cookies[i].getName().equals("user")) {
-						if (cookies[i].getValue().equals("lector")) {
-							out.println("<li class=\"nav-item\">"+
-										"<a class=\"nav-link js-scroll-trigger\" href=\"DataLectorServlet\" onmouseover=\"this.style.color='orange';\" onmouseout=\"this.style.color=''\">Mi Cuenta</a>"+
-										"</li>");
-							} else if (cookies[i].getValue().equals("publicista")) {
-							out.println("<li class=\"nav-item\">"+
-										"<a class=\"nav-link js-scroll-trigger\" href=\"DataPublicistaServlet\" onmouseover=\"this.style.color='orange';\" onmouseout=\"this.style.color=''\">Mi Cuenta</a>"+
-										"</li>");
-							} else if (cookies[i].getValue().equals("root")) {
-										out.println("<h1>VISTA DEL ADMINISTRADOR</h1>"); 
-						    } else {
-										//out.println("<h1>ERROR:( rol de usuario no identificado, consulte al administrador. </h1>");
-						    } 
-						
 						out.println("<li class=\"nav-item\">"+
+									"<a class=\"nav-link js-scroll-trigger\" href=\"MiCuentaServlet\" onmouseover=\"this.style.color='orange';\" onmouseout=\"this.style.color=''\">Mi Cuenta</a>"+
+									"</li>"+
+									"<li class=\"nav-item\">"+
 									"<a class=\"nav-link js-scroll-trigger\" href=\"publicar.jsp\" onmouseover=\"this.style.color='orange';\" onmouseout=\"this.style.color=''\">Publicar</a>"+
 									"</li>");
 						found = true;
+						break;
 					}
 				}
 			}

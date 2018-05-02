@@ -55,17 +55,25 @@
     </section>
     <br><br>
     
-    
-    <h1 >Mis datos: Modo Lector </h1>
-    
-    <p>Nombre del usuario: <c:out value="${name}"/> ></p>    
-    <p>Email del usuario: <c:out value="${email}"/> </p>
-   	<select name="Criticas">
-	<option value="" disabled selected>Mis críticas:</option>
-	<c:forEach items="${criticas_list}" var="criticai">
-			 <option value="Mis Criticas">${criticai.titulo}</option>
-	</c:forEach>
-	</select>
+    <%
+    	if (found) {
+			for (int i = 0; i < cookies.length; i++) {
+				if (cookies[i].getValue().equals("lector")) {
+	%>
+
+					<%@ include file = "DatosLector.jsp" %>
+	
+	<%
+				} else if (cookies[i].getValue().equals("publicista")) {
+	%>
+
+					<%@ include file = "DatosPublicista.jsp" %>
+	
+	<%
+				}
+			}
+    	}
+    %>
      
     <br><br>
     <h4>Logout</h4>
