@@ -12,7 +12,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>BA - Catálogo</title>
+    <title>BA - Búsqueda</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -23,7 +23,7 @@
     <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
 
     <!-- Custom styles for this template -->
-    <link href="css/catalogo.min.css" rel="stylesheet">
+    <link href="css/busqueda.min.css" rel="stylesheet">
 
   </head>
 
@@ -32,29 +32,16 @@
     <!-- Navigation -->
   	<%@ include file = "NavigationBar.jsp" %>
 
-    <!-- Intro Header -->
-    <header class="masthead">
-      <div class="intro-body">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 mx-auto">
-              <br><br><br><br>
-              <h1 class="brand-heading">CATÁLOGO</h1>
-              <p class="media-text" style= "font-size:27px;">
-                <br>BookAdvisor</p>
-                <a href="#about" class="btn btn-circle js-scroll-trigger">
-                <i class="fa fa-angle-double-down animated"></i>
-              </a>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+   
+
+  
+
+
 
                                             <!-- Page Content -->
 
 <br><br> <br><br>
+<header class="masthead">
 <!-- Page Content -->
     <section id="about" >
     <div class="container">
@@ -64,7 +51,7 @@
         <!-- Blog Entries Column -->
         <div class="col-md-8">
           
-          <h1 class="my-4"> Libros más comentados </h1> <br>
+          <br><br><br><h1 class="my-4"> Resultados de tu búsqueda </h1> <br><br>
 
           <div class="row">
         <div class="col-lg-3 col-sm-6 mb-4" style = "height: 20rem;">
@@ -117,131 +104,42 @@
           </div>
         </div> <!--row-->
 
-    <div><br><br><br></div>
-        <h1 class="my-4"> Novela negra </h1> <br>
-
-         <div class="row">
-
-    <div class="col-lg-3 col-sm-6 mb-4" style = "height: 20rem;">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="https://imagessl5.casadellibro.com/a/l/t0/15/9788497592215.jpg" alt="" style = "height:14rem;"></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#" style="font-size:12px;">La casa negra <br/>  <h6> Stephen King Peter </small> </h6>
-              </h4>
-              
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-sm-6 mb-4" style = "height: 20rem;">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://www.erein.eus/media/portadas/x/portada1278.jpg" alt="" style = "height:14rem;"></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#" > Eva <br/>  <h6 style="font-size:14px;"> Arturo Pérez-Reverte </h6> </a>
-              </h4>
-              
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-sm-6 mb-4" style = "height: 20rem;">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://quelibroleo.com/images/libros/libro_1322161062.jpg" alt="" style = "height:14rem;"></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#" style="font-size:19px;"> El padrino <br/>  <h6> Mario Puzo</h6></a>
-                
-              </h4>
-              
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-sm-6 mb-4" style = "height: 20rem;">
-          <div class="card h-100">
-            <a href="#"> <img class="card-img-top" src="http://www.estudioenescarlata.com/images/portadas/9788490569481.jpg" alt="" style = "height:14rem;"></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#" style="font-size:19px;"> 1280 almas <br/>  <h6> Jim Thopsom </h6> </a>
-              </h4>
-            
-            </div>
-          </div>
-        </div>
-         </div>
-
-
-  <div><br><br><br></div>
-        <h1 class="my-4"> Novela histórica </h1> <br>
-
-         <div class="row">
-
-    <div class="col-lg-3 col-sm-6 mb-4" style = "height: 20rem;">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="https://www.planetadelibros.com/usuaris/libros/fotos/213/original/portada_el-espartano_javier-negrete_201705301213.jpg" alt="" style = "height:14rem;"></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#" style="font-size:15px;">El espartano <br/>  <h6> Javier Negrete  </small> </h6>
-              </h4>
-              
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-sm-6 mb-4" style = "height: 20rem;">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://4.bp.blogspot.com/-vCrQL6vMZxI/VfmTHw2v7vI/AAAAAAAAC08/Rx8ZzB7qSTQ/s1600/EL%2BCASTILLO%2B%25282%2529%2Bcopia.jpg" alt="" style = "height:14rem;"></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#" style="font-size:18px;"> El castillo <br/>  <h6 > Luis Zueco </h6> </a>
-              </h4>
-              
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-sm-6 mb-4" style = "height: 20rem;">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://4.bp.blogspot.com/-nKzQhhN1mao/Thti93YUgKI/AAAAAAAARG4/02gr1Cu8q0Q/s1600/Barcino.jpg" alt="" style = "height:14rem;"></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#" style="font-size:19px;"> Barcino <br/>  <h6> María Carme Roca</h6></a>
-                
-              </h4>
-              
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-sm-6 mb-4" style = "height: 20rem;">
-          <div class="card h-100">
-            <a href="#"> <img class="card-img-top" src="http://www.esferalibros.com/uploads/imagenes/libros/principal/201709/principal-portada-el-tercer-rey_1-es.jpg" alt="" style = "height:14rem;"></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#" style="font-size:15px;"> El tercer rey <br/>  <h6 style="font-size:14px;"> Pedro Miguel Lamet </h6> </a>
-              </h4>
-            
-            </div>
-          </div>
-        </div>
-
-        </div> <!--row-->                       
-          
-
-        </div>
+    <div>
+    	<br><br><br>
+    </div>
+ 
+    </div>
 
         <!-- Sidebar Widgets Column -->
-        <div class="col-md-4">
-
+       <div class="col-md-4">
+		<br><br><br><br><br><br><br><br>
           <!-- Search Widget -->
+          <div class="card my-4">
+            <h5 class="card-header" style="color:grey;">Buscar libros por TÍTULO</h5>
+            <div class="card-body">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Escribe aquí..">
+                <span class="input-group-btn">
+                  <button class="btn btn-secondary" type="button">Buscar</button>
+                </span>
+              </div>
+            </div>
+          </div>
 
-		  <%@ include file = "FormSearchTitle.jsp" %>
           <div><br></div>
 
           <!-- Search Widget -->
-		  <%@ include file = "FormSearchAuthor.jsp" %>
+          <div class="card my-4">
+            <h5 class="card-header" style="color:grey;">Buscar libros por AUTOR</h5>
+            <div class="card-body">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Escribe aquí...">
+                <span class="input-group-btn">
+                  <button class="btn btn-secondary" type="button">Buscar</button>
+                </span>
+              </div>
+            </div>
+          </div>
 
         <div><br></div>
 
@@ -301,6 +199,7 @@
     <!-- /.container -->
 
 </section>
+</header>
     <!-- Footer -->
     <footer>
       <div class="container text-center">
