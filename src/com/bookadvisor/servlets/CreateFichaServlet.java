@@ -28,7 +28,6 @@ public class CreateFichaServlet extends HttpServlet {
 		String titulo = req.getParameter("titulo");
 		String autor = req.getParameter("autor");
 		String editorial = req.getParameter("editorial");
-		String ISBN = req.getParameter("ISBN");
 		String categoria = req.getParameter("categoria");
 		String fecha = req.getParameter("fecha");
 		String resenaEditorial = req.getParameter("resenaEditorial");
@@ -50,7 +49,6 @@ public class CreateFichaServlet extends HttpServlet {
 									.setAutor(autor)
 									.setTitulo(titulo)
 									.setEditorial(editorial)
-									.setISBN(ISBN)
 									.setCategoria(categoria)
 									.setDate(date)
 									.setResEdit(resenaEditorial);

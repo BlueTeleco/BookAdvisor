@@ -14,7 +14,7 @@ public class Lector implements Serializable {
 	private String password;
 
 	public String getNombre() {
-		return nombre;
+		return this.nombre;
 	}
 
 	public Lector setNombre(String nombre) {
@@ -23,7 +23,7 @@ public class Lector implements Serializable {
 	}
 	
 	public String getEmail() {
-		return email;
+		return this.email;
 	}
 	
 	public Lector setEmail(String email) {
@@ -32,7 +32,7 @@ public class Lector implements Serializable {
 	}
 	
 	public String getPassword() {
-		return password;
+		return this.password;
 	}
 	
 	public Lector setPassword(String password) {

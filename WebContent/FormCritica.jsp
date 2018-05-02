@@ -12,7 +12,7 @@
 	<br/>
 	<input type="text" name="titulo" placeholder="Titulo de la crítica">
 	<br/>
-	<textarea rows="4" cols="50" placeholder="Descripción de la crítica..."></textarea>
+	<textarea name="cuerpo" rows="4" cols="50" placeholder="Descripción de la crítica..."></textarea>
 	<br/>
 	<input type="submit" value="Crear nueva crítica"></input>
 	

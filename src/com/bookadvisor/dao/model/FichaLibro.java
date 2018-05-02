@@ -13,15 +13,21 @@ import javax.persistence.Id;
 @Entity
 public class FichaLibro implements Serializable {
 	
+	
+	//private String ISBN; ahora está en Exchange
 	@Id
-	private String ISBN;
 	private String titulo;
 	private String autor;
 	private String editorial;
-	private String formato;
+	//private String formato; ahora está en Exchange
 	
+	@ElementCollection(targetClass=Exchange.class)
+	private List<Exchange> exchanges; // Lista de ISBN que intercambian ese libro
+	// La reseña de la editorial es una lista? Dont think so
 	@ElementCollection(targetClass=String.class)
 	private List<String> resenaEditorial;
+	@ElementCollection(targetClass=Critica.class)
+	private List<Critica> criticas;
 	@ElementCollection(targetClass=String.class)
 	private List<String> bibliotecas; //OJOOOOOOOO FALTA METER LAS BIBLIOS CERCANAS 
 	private String categoria;
@@ -31,6 +37,8 @@ public class FichaLibro implements Serializable {
 	public FichaLibro() {
 		this.resenaEditorial = new ArrayList<>();
 		this.bibliotecas = new ArrayList<>();
+		this.criticas = new ArrayList<>();
+		this.exchanges = new ArrayList<>();
 	}
 
 	public String getTitulo() {
@@ -60,23 +68,23 @@ public class FichaLibro implements Serializable {
 		return this;
 	}
 	
-	public String getFormato() {
+	/*public String getFormato() {
 		return formato;
 	}
 	
 	public FichaLibro setFormato(String formato) {
 		this.formato = formato;
 		return this;
-	}
+	}*/
 	
-	public String getISBN() {
+	/*public String getISBN() {
 		return ISBN;
 	}
 	
 	public FichaLibro setISBN(String iSBN) {
 		ISBN = ISBN;
 		return this;
-	}
+	}*/
 	
 	public List<String> getResEdit() {
 		return resenaEditorial;
@@ -122,6 +130,24 @@ public class FichaLibro implements Serializable {
 
 	public FichaLibro setBibliotecas(List<String> bibliotecas) {
 		this.bibliotecas = bibliotecas;
+		return this;
+	}
+	
+	public List<Critica> getCriticas() {
+		return this.criticas;
+	}
+
+	public FichaLibro setCriticas(List<Critica> criticas) {
+		this.criticas = criticas;
+		return this;
+	}
+	
+	public List<Exchange> getExchanges() {
+		return this.exchanges;
+	}
+
+	public FichaLibro setExchanges(List<Exchange> exchanges) {
+		this.exchanges = exchanges;
 		return this;
 	}
 	

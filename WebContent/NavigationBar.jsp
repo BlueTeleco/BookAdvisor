@@ -15,7 +15,7 @@
 		  <a class="nav-link js-scroll-trigger" href="noticias.jsp" onmouseover="this.style.color='orange';" onmouseout="this.style.color=''">Tablón de noticias</a>
 		</li>
 		
-		<%
+		<%		
 			Cookie[] cookies = request.getCookies();
 			boolean found = false;
 			if (cookies != null) {

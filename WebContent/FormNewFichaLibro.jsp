@@ -2,13 +2,12 @@
 
 	<input type="text" name="title" placeholder="Titulo del libro" />
 	<input type="text" name="autor" placeholder="Autor del libro" />
-	<input type="text" name="editorial" placeholder="Editorial del libro" />
-	<input type="text" name="ISBN" placeholder="ISBN del libro" /> 
+	<input type="text" name="editorial" placeholder="Editorial del libro" /><br/>
 
-	<p>Fecha de publicacion del Libro:</p>
-	<input type="text" name="fecha" placeholder="Fecha de publicacion: dd/mm/aaaa"/>
+	<p>Fecha de publicacion del Libro:
+	<input type="text" name="fecha" placeholder="dd/mm/aaaa"/></p>
 
-	<p style="color: #013252;" >
+	<p>
 	<label for="categoria">Categoria del libro: 
 		<select class="form-control" style="width: 250px;" name="categoria" id="categoria">
 			<optgroup label="Categoria del libro">
@@ -27,9 +26,12 @@
 	</label>
 	</p>
 		
-	<input type="file" name="image" accept="image/*"/>
-	<input type="text" name="resenaEditorial" placeholder="Resena de la editorial" /> 
+	<!--  <input type="file" name="image" accept="image/*"/> -->
 	
+	<p>Reseña de la editorial:</p>
+	<textarea cols="50" rows="4" name="resenaEditorial"> </textarea>
+	<br/>
+	<br/>
 	<input type="submit" value="crear ficha de libro"></input>
 	<br/>
 	<br/>

@@ -54,6 +54,11 @@
     </header>
 
   
+  	<form action="ReadFichaLibroServlet">
+  		<input type="text" name="titulo" placeholder="Titulo > PresentacionFichaLibro.jsp" /> 
+  		<input type="submit">Presentacion ficha libro</input>
+  	</form>
+
 
 <!-- About Section -->
     <section id="about" class="content-section text-center">
