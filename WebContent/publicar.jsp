@@ -51,19 +51,26 @@
       </div>
     </header>
 
-  
-
-  <section id="about" >
+    <section id="about" >
     </section>
     <br><br><br>
-    <h4 >Publica una nueva entrada</h4>
-      <%@ include file = "FormNewFichaLibro.jsp" %>
-      <%@ include file = "FormNewNoticia.jsp" %>
-    <br><br><br><br><br><br><br><br>
-    
+    <h4 >Publicar una nueva entrada: </h4>
+
+		<%	Cookie[] cookies2 = request.getCookies();
+			if (cookies != null) {
+				for (int i = 0; i < cookies.length; i++) {
+					if (cookies[i].getName().equals("user")) {
+						if (cookies[i].getValue().equals("lector")) {%>
+							 <%@ include file = "FormNewFichaLibro.jsp" %>	
+					<%  } else if (cookies[i].getValue().equals("publicista")) {%>
+								 <%@ include file = "FormNewNoticia.jsp" %><% 
+						}  
+					}
+				}
+			}
+		%>
+   
     <br><br><br>
-
-
 
     <!-- Footer -->
     <footer>
