@@ -52,10 +52,6 @@
       </div>
     </header>
 
-  
-
-
-
                                             <!-- Page Content -->
 
 <br><br> <br><br>
@@ -240,32 +236,12 @@
         <div class="col-md-4">
 
           <!-- Search Widget -->
-          <div class="card my-4">
-            <h5 class="card-header" style="color:grey;">Buscar libros por TÍTULO</h5>
-            <div class="card-body">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Escribe aquí..">
-                <span class="input-group-btn">
-                  <button class="btn btn-secondary" type="button">Buscar</button>
-                </span>
-              </div>
-            </div>
-          </div>
 
+		  <%@ include file = "FormSearchTitle.jsp" %>
           <div><br></div>
 
           <!-- Search Widget -->
-          <div class="card my-4">
-            <h5 class="card-header" style="color:grey;">Buscar libros por AUTOR</h5>
-            <div class="card-body">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Escribe aquí...">
-                <span class="input-group-btn">
-                  <button class="btn btn-secondary" type="button">Buscar</button>
-                </span>
-              </div>
-            </div>
-          </div>
+		  <%@ include file = "FormSearchAuthor.jsp" %>
 
         <div><br></div>
 
