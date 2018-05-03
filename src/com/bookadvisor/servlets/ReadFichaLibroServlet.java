@@ -21,7 +21,7 @@ public class ReadFichaLibroServlet extends HttpServlet {
 		//request.getSession().removeAttribute("fl");
 		String titulo = request.getParameter("titulo");
 		System.out.println("getParameter(titulo) del input:"+titulo);
-		System.out.println("DAO"+ (FichaLibro) FichaLibroDAOImplementation.getInstance().read(titulo));
+		System.out.println("DAO"+ (Boolean) FichaLibroDAOImplementation.getInstance().getAll().isEmpty());
 		FichaLibro fl = (FichaLibro) FichaLibroDAOImplementation.getInstance().read(titulo);
 
 		request.getSession().setAttribute("fl", fl);

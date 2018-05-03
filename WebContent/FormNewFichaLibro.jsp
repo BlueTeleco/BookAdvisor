@@ -1,11 +1,11 @@
 <form action="CreateFichaServlet" method="post">
 
-	<input type="text" name="title" placeholder="Titulo del libro" />
+	<input type="text" name="titulo" placeholder="Titulo del libro" />
 	<input type="text" name="autor" placeholder="Autor del libro" />
 	<input type="text" name="editorial" placeholder="Editorial del libro" /><br/>
 
-	<p>Fecha de publicacion del Libro:
-	<input type="text" name="fecha" placeholder="dd/mm/aaaa"/></p>
+	<p>Fecha de publicación del Libro:
+	<input type="text" name="fecha" placeholder="dia/mes/año"/></p>
 
 	<p>
 	<label for="categoria">Categoria del libro: 

@@ -1,13 +1,14 @@
 package com.bookadvisor.servlets;
 
 import java.awt.image.BufferedImage;
+
+
 import java.io.IOException;
 import java.io.InputStream;
+import java.sql.Date;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
 
 import javax.imageio.ImageIO;
 import javax.servlet.ServletException;
@@ -31,7 +32,7 @@ public class CreateFichaServlet extends HttpServlet {
 		String categoria = req.getParameter("categoria");
 		String fecha = req.getParameter("fecha");
 		String resenaEditorial = req.getParameter("resenaEditorial");
-		
+		System.out.println("CreateFichaServlet autor"+autor+"fecha:"+fecha+" categoria:"+ categoria+" titulo:"+ titulo+" editorial:"+editorial+" ReseñaEditorial:"+resenaEditorial);
 		/*
 		BufferedImage imagen = null;
 		Part imagePart = req.getPart("image");
@@ -39,29 +40,32 @@ public class CreateFichaServlet extends HttpServlet {
 			InputStream imageContent = imagePart.getInputStream();
 			imagen = ImageIO.read(imageContent);
 		}
+		
+		DateFormat f = new SimpleDateFormat("dd/MM/yyyy");
+		try {
+			java.util.Date d = f.parse(fecha);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		*/
 		
-		DateFormat df = new SimpleDateFormat("dd/MM/yyyy", Locale.FRENCH);
-		
-		try {
-			Date date = df.parse(fecha);
-			FichaLibro libro = new FichaLibro()
+		FichaLibro libro = new FichaLibro()
 									.setAutor(autor)
 									.setTitulo(titulo)
 									.setEditorial(editorial)
 									.setCategoria(categoria)
-									.setDate(date)
+									//.setDate("fecha");
+									.setISBN("vacio")
 									.setResEdit(resenaEditorial);
-			/*
+		
+			/*º
 			if (imagen != null) {
 				libro.setImagen(imagen);
 			}
 			*/
 			
-			FichaLibroDAOImplementation.getInstance().create(libro);
-			resp.sendRedirect(req.getContextPath() + "/index.jsp");
-		} catch (ParseException e) {
-			e.printStackTrace();
-		}
+		FichaLibroDAOImplementation.getInstance().create(libro);
+		resp.sendRedirect(req.getContextPath() + "/index.jsp");
 	}
 }

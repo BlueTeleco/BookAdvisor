@@ -63,7 +63,7 @@ public class Exchange implements Serializable {
 		return estado;
 	}
 	
-	public Exchange setEstador(String estado) {
+	public Exchange setEstado(String estado) {
 		this.estado = estado;
 		return this;
 	}
