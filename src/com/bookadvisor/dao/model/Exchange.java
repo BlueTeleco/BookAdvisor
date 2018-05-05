@@ -45,7 +45,7 @@ public class Exchange implements Serializable {
 		return ISBN;
 	}
 	
-	public Exchange setISBN(String iSBN) {
+	public Exchange setISBN(String ISBN) {
 		ISBN = ISBN;
 		return this;
 	}
