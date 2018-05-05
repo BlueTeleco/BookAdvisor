@@ -237,7 +237,7 @@
 					<br><br>
 				<input type="text" class="form-control" name="ISBN" placeholder="ISBN de mi libro">
 					<br><br>
-				<textarea name="info" class="form-control" rows="4" cols="50" rows="3" placeholder="Información adicional..."></textarea>
+				<textarea name="info" class="form-control" rows="4" cols="50" rows="3" placeholder="Condiciones del intercambio"></textarea>
 					<br><br>
 				<input type="submit" class="form-control" class="btn btn-primary" value="Crear propuesta de intercambio" style="background-color:#42DCA3;"></input>
                 </div>

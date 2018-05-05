@@ -14,12 +14,12 @@ import javax.persistence.Id;
 public class FichaLibro implements Serializable {
 	
 	
-	//private String ISBN; ahora está en Exchange
 	@Id
 	private String titulo;
 	private String autor;
 	private String editorial;
 	//private String formato; ahora está en Exchange
+	//private String ISBN;
 	
 	@ElementCollection(targetClass=Exchange.class)
 	private List<Exchange> exchanges; // Lista de ISBN que intercambian ese libro
@@ -75,14 +75,14 @@ public class FichaLibro implements Serializable {
 	public FichaLibro setFormato(String formato) {
 		this.formato = formato;
 		return this;
-	}*/
+	}
 	
-	/*public String getISBN() {
+	public String getISBN() {
 		return ISBN;
 	}
 	
-	public FichaLibro setISBN(String iSBN) {
-		ISBN = ISBN;
+	public FichaLibro setISBN(String ISBN) {
+		this.ISBN = ISBN;
 		return this;
 	}*/
 	
