@@ -146,7 +146,7 @@
 			<div>
 			<h4> Críticas de otros lectores:</h4>
 					<c:forEach items="${fl.getCriticas()}" var="criticai">
-				 		<h3><c:out value="${criticai.getTitulo()}"/><p>  </p><c:out value="${criticai.getTitulo()}"/></h3>
+				 		<h3><c:out value="${criticai.getTitulo()}"/><c:out value=" ${criticai.getPuntuacion()}"/></h3>
 				 		<p><c:out value="${criticai.getTexto()}"/></p>
 				 		<strong>Firmado: <c:out value="${criticai.getAutor()}"/></strong></br></br>		 
 					</c:forEach>
@@ -185,11 +185,10 @@
           <h4> Lectores que ofrecen intercambio de libros:</h4>
           <div>
 			<c:forEach items="${fl.getExchanges()}" var="exchangei">
-			 	<h3><c:out value="${exchangei.getTitulo()}"/></h3>
-			 	<p>Email de contacto: <c:out value="${exchangei.getEmail()}"/></p>
+			 	<h3>ISBN: <c:out value="${exchangei.getISBN()}"/></h3>
 			 	<p>Formato: <c:out value="${exchangei.getFormato()}"/></p>
 			 	<p>Estado del libro: <c:out value="${exchangei.getEstado()}"/></p>
-			 	<p>ISBN: <c:out value="${exchangei.getISBN()}"/></p>
+			 	<p>Email de contacto: <c:out value="${exchangei.getEmail()}"/></p>
 			 	<p>Información adicional: <c:out value="${exchangei.getInfo()}"/></p> </br></br>
 			</c:forEach>
 	</div>

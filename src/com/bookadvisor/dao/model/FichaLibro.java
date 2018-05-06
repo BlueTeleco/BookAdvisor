@@ -6,7 +6,9 @@ import javax.persistence.FetchType;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
@@ -21,8 +23,8 @@ public class FichaLibro implements Serializable {
 	private String autor;
 	private String editorial;
 	
-	//@OneToMany(mappedBy = "fll", fetch = FetchType.LAZY)
-	private List<Exchange> exchanges; 
+	@OneToMany(mappedBy = "fl", fetch = FetchType.EAGER)
+	private Set<Exchange> exchanges; 
 
 	@OneToMany(mappedBy = "fl", fetch = FetchType.EAGER)
 	private List<Critica> criticas;
@@ -37,7 +39,7 @@ public class FichaLibro implements Serializable {
 	public FichaLibro() {
 		//this.bibliotecas = new ArrayList<>();
 		this.criticas = new ArrayList<>();
-		//this.exchanges = new ArrayList<>();
+		this.exchanges = new HashSet<>();
 	}
 
 	public String getTitulo() {
@@ -123,11 +125,11 @@ public class FichaLibro implements Serializable {
 		return this;
 	}
 	
-	public List<Exchange> getExchanges() {
+	public Set<Exchange> getExchanges() {
 		return this.exchanges;
 	}
 
-	public FichaLibro setExchanges(List<Exchange> exchanges) {
+	public FichaLibro setExchanges(Set<Exchange> exchanges) {
 		this.exchanges = exchanges;
 		return this;
 	}

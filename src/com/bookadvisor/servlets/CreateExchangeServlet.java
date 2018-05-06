@@ -2,6 +2,7 @@ package com.bookadvisor.servlets;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Set;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -37,7 +38,7 @@ public class CreateExchangeServlet extends HttpServlet {
 		ExchangeDAOImplementation.getInstance().create(ex);
 		
 
-		List<Exchange> lista = fl.getExchanges();
+		Set<Exchange> lista = fl.getExchanges();
 		lista.add(ex);
 		fl.setExchanges(lista);
 		FichaLibroDAOImplementation.getInstance().update(fl);

@@ -2,6 +2,7 @@ package com.bookadvisor.dao.model;
 
 import java.awt.Image;
 
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
@@ -17,13 +18,12 @@ public class Exchange implements Serializable {
 	
 	@Id
 	private String ISBN;
-	//@ManyToOne
-	private FichaLibro fll;
+	@ManyToOne
+	private FichaLibro fl;
 	private String email;
 	private String info;
 	private String estado;
 	private String formato;
-	private FichaLibro fl;
 
 	
 	public String getEmail() {
