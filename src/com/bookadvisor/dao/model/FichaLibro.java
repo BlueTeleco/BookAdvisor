@@ -21,24 +21,27 @@ public class FichaLibro implements Serializable {
 	//private String formato; ahora está en Exchange
 	//private String ISBN;
 	
+	/*@ElementCollection(targetClass=Critica.class)
+	private List<Critica> criticas;
 	@ElementCollection(targetClass=Exchange.class)
 	private List<Exchange> exchanges; // Lista de ISBN que intercambian ese libro
+
+	*/
 	// La reseña de la editorial es una lista? Dont think so
 	@ElementCollection(targetClass=String.class)
 	private List<String> resenaEditorial;
-	@ElementCollection(targetClass=Critica.class)
-	private List<Critica> criticas;
+	
 	@ElementCollection(targetClass=String.class)
 	private List<String> bibliotecas; //OJOOOOOOOO FALTA METER LAS BIBLIOS CERCANAS 
 	private String categoria;
-	private Date date;
+	private String date;
 	// private Image imagen;
 	
 	public FichaLibro() {
 		this.resenaEditorial = new ArrayList<>();
 		this.bibliotecas = new ArrayList<>();
-		this.criticas = new ArrayList<>();
-		this.exchanges = new ArrayList<>();
+		//this.criticas = new ArrayList<>();
+		//this.exchanges = new ArrayList<>();
 	}
 
 	public String getTitulo() {
@@ -104,12 +107,12 @@ public class FichaLibro implements Serializable {
 		return this;
 	}
 	
-	public Date getDate() {
+	public String getDate() {
 		return date;
 	}
 	
-	public FichaLibro setDate(Date date) {
-		this.date = date;
+	public FichaLibro setDate(String fecha) {
+		this.date = fecha;
 		return this;
 	}
 	
@@ -133,7 +136,7 @@ public class FichaLibro implements Serializable {
 		return this;
 	}
 	
-	public List<Critica> getCriticas() {
+/*	public List<Critica> getCriticas() {
 		return this.criticas;
 	}
 
@@ -150,5 +153,5 @@ public class FichaLibro implements Serializable {
 		this.exchanges = exchanges;
 		return this;
 	}
-	
+	*/
 }

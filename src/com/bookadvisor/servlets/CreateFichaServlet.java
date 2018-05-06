@@ -32,7 +32,7 @@ public class CreateFichaServlet extends HttpServlet {
 		String fecha = req.getParameter("fecha");
 		String resenaEditorial = req.getParameter("resenaEditorial");
 		
-		/*
+		/* 
 		BufferedImage imagen = null;
 		Part imagePart = req.getPart("image");
 		if ((imagePart.getSize() > 0) && ( imagePart.getSize() < 8388609)) { // Si hay imagen y es menor de 8Mbits	    
@@ -40,17 +40,14 @@ public class CreateFichaServlet extends HttpServlet {
 			imagen = ImageIO.read(imageContent);
 		}
 		*/
+			
 		
-		DateFormat df = new SimpleDateFormat("dd/MM/yyyy", Locale.FRENCH);
-		
-		try {
-			Date date = df.parse(fecha);
 			FichaLibro libro = new FichaLibro()
 									.setAutor(autor)
 									.setTitulo(titulo)
 									.setEditorial(editorial)
 									.setCategoria(categoria)
-									.setDate(date)
+									.setDate(fecha)
 									.setResEdit(resenaEditorial);
 			/*
 			if (imagen != null) {
@@ -59,9 +56,8 @@ public class CreateFichaServlet extends HttpServlet {
 			*/
 			
 			FichaLibroDAOImplementation.getInstance().create(libro);
+			System.out.println("CreateFichaServlet, dame la ficha de libro creada:"+FichaLibroDAOImplementation.getInstance().read(titulo));
 			resp.sendRedirect(req.getContextPath() + "/index.jsp");
-		} catch (ParseException e) {
-			e.printStackTrace();
-		}
+	
 	}
 }
