@@ -21,8 +21,8 @@ public class FichaLibro implements Serializable {
 	private String autor;
 	private String editorial;
 	
-	@OneToMany(mappedBy = "fl", fetch = FetchType.EAGER)
-	private List<Exchange> exchanges; 
+//	OneToMany(mappedBy = "fl", fetch = FetchType.EAGER)
+//	private List<Exchange> exchanges; 
 
 	@OneToMany(mappedBy = "fl", fetch = FetchType.EAGER)
 	private List<Critica> criticas;
@@ -37,7 +37,7 @@ public class FichaLibro implements Serializable {
 	public FichaLibro() {
 		this.bibliotecas = new ArrayList<>();
 		this.criticas = new ArrayList<>();
-		this.exchanges = new ArrayList<>();
+		//this.exchanges = new ArrayList<>();
 	}
 
 	public String getTitulo() {
@@ -123,13 +123,13 @@ public class FichaLibro implements Serializable {
 		return this;
 	}
 	
-	public List<Exchange> getExchanges() {
+	/*public List<Exchange> getExchanges() {
 		return this.exchanges;
 	}
 
 	public FichaLibro setExchanges(List<Exchange> exchanges) {
 		this.exchanges = exchanges;
 		return this;
-	}
+	}*/
 	
 }

@@ -20,6 +20,8 @@
         <mapping class="com.bookadvisor.dao.model.Lector" />
         <mapping class="com.bookadvisor.dao.model.Libreria" />
         <mapping class="com.bookadvisor.dao.model.Noticia" />
+        <mapping class="com.bookadvisor.dao.model.Critica" />
+        <mapping class="com.bookadvisor.dao.model.Exchange" />
     </session-factory>
 </hibernate-configuration>
                        

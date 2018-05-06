@@ -22,8 +22,8 @@ public class Exchange implements Serializable {
 	private String info;
 	private String estado;
 	private String formato;
-	@ManyToOne
-	private FichaLibro fl;
+//	ManyToOne
+//	private FichaLibro fl;
 	
 	public String getEmail() {
 		return this.email;
@@ -51,7 +51,7 @@ public class Exchange implements Serializable {
 		this.ISBN = ISBN;
 		return this;
 	}
-	
+/*	
 	public FichaLibro getFl() {
 		return fl;
 	}
@@ -60,7 +60,7 @@ public class Exchange implements Serializable {
 		this.fl = fl;
 		return this;
 	}
-	
+	*/
 	public String getInfo() {
 		return info;
 	}

@@ -89,7 +89,7 @@
         <div class="col-lg-8">
           <h5>Autor/a del libro: <c:out value="${fl.getAutor()}"/></h5>  <br>
           <h5>Editorial del libro: Editorial: <c:out value="${fl.getAutor()}"/></h5> <br>
-          <h5>Fecha de publicación de libro:</h5> <br>
+          <h5>Fecha de publicación de libro:<c:out value="${fl.getDate() }"/></h5> <br>
           <h5>Categoría del libro:</h5> <c:out value="${fl.getCategoria()}"/><br>
           <h5>Reseña de la editorial:</h5> <c:out value="${fl.getResEdit()}"/> <br>
         </div>
@@ -167,7 +167,6 @@
 			 		<strong>Firmado: <c:out value="${criticai.getAutor().getNombre()}"/></strong></br>		 
 			 		 
 					</c:forEach>
-				</select>
 			</div>
           <!-- Single Comment -->
           <div>
@@ -247,15 +246,7 @@
           <br><hr><br><br>
           <h4> Lectores que ofrecen intercambio de libros:</h4>
           <div>
-			<c:forEach items="${fl.getExchanges()}" var="exchangei">
-			 	<h3><c:out value="${exchangei.getTitulo()}"/></h3>
-			 	<p>Email de contacto: <c:out value="${exchangei.getEmail()}"/></p>
-			 	<p>Formato: <c:out value="${exchangei.getFormato()}"/></p>
-			 	<p>Estado del libro: <c:out value="${exchangei.getEstado()}"/></p>
-			 	<p>ISBN: <c:out value="${exchangei.getISBN()}"/></p>
-			 	<p>Información adicional: <c:out value="${exchangei.getInfo()}"/></p></br>
-			</c:forEach>
-		</select>
+		
 	</div>
 			<div class="media mb-4">
             	<img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
