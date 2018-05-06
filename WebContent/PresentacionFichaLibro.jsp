@@ -63,50 +63,51 @@
         <div class="row">
 
         <!-- Post Content Column -->
-        <div>
+        <div class=container>
 
           <!-- Title -->
-          <h1 class="mt-4"><c:out value="${fl.getTitulo()}"/></h1></h1>
-
-          <hr>
+          <h1 class="mt-4"><c:out value="${fl.getTitulo()}"/></h1> 
+		</div> <hr>
+          
 
           <br>
           <!-- Preview Image -->
           <div class="container">
-          <div class="row my-8">
-        <div class="col-lg-4">
+          <hr>
+          <div class="row my-2">
+        <div class="col-lg-5">
+        	<div class="container">
         	<br>
-        	<center>
-			<img class="img-fluid rounded" src="https://imagessl1.casadellibro.com/a/l/t0/71/9788408141471.jpg" alt="" style = "height:35rem;">        </div>
-			</center>        
+        
+			<img class="img-fluid rounded" src="https://imagessl1.casadellibro.com/a/l/t0/71/9788408141471.jpg" alt="" style = "height:37rem;">        
+			</div></div>
+		       
         <!-- /.col-lg-8 -->
-        <div class="col-lg-8">
+        <div class="col-lg-5">
           <br><br>
-          <h5>  <strong style="color:#42DCA3">Autor/a del libro: </strong><h5> <c:out value="${fl.getAutor()}"/> autor</h5></h5> <br><br><br>
-          <h5> <strong style="color:#42DCA3"> Editorial del libro: </strong> <h5> <c:out value="${fl.getEditorial()}"/> editorial</h5></h5> <br><br><br>
-          <h5> <strong style="color:#42DCA3"> Fecha de publicación de libro:</strong> <h5> <c:out value="${fl.getDate()}"/> fecha </h5></h5> <br><br><br>
-          <h5> <strong  style="color:#42DCA3"> Categoría del libro:</strong> <h5> <c:out value="${fl.getCategoria()}"/> categoria</h5><br><br>
+          <h5>  <strong style="color:#42DCA3">Autor/a del libro: </strong><h5> <c:out value="${fl.getAutor()}"/> </h5></h5> <br><br><br>
+          <h5> <strong style="color:#42DCA3"> Editorial del libro: </strong> <h5> <c:out value="${fl.getEditorial()}"/> </h5></h5> <br><br><br>
+          <h5> <strong style="color:#42DCA3"> Fecha de publicación de libro:</strong> <h5> <c:out value="${fl.getDate()}"/> </h5></h5> <br><br><br>
+          <h5> <strong  style="color:#42DCA3"> Categoría del libro:</strong> <h5> <c:out value="${fl.getCategoria()}"/> </h5><br><br>
           
         </div>
         </div>
         <!-- /.col-md-4 -->
-      </div>
+      
           
           <br><br>
-          <hr>
+         
 
           <!-- Post Content -->
-          
+           <hr>
 		<h5> <strong  style="color:#42DCA3"> Reseña de la editorial: </strong> </h5> <br><br>
-		<h5><c:out value="${fl.getResEdit()}"/> texto</h5> <br>
+		<h5><c:out value="${fl.getResEdit()}"/> </h5> <br>
  
             <br><br><hr>
-        
+        </div>
       </div>
     </div>
-  </div>
-
-
+  
 
 
   <!-- fORMULARIO DE CRITICAS -->
