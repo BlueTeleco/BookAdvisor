@@ -2,6 +2,7 @@
 package com.bookadvisor.dao;
 
 import java.util.ArrayList;
+
 import java.util.List;
 
 import org.hibernate.Session;
@@ -27,6 +28,7 @@ public class FichaLibroDAOImplementation implements FichaLibroDAO {
 			session.save(ficha);
 			session.getTransaction().commit();
 		} catch (Exception e) {
+			e.printStackTrace();
 		} finally {
 				session.close();
 		}

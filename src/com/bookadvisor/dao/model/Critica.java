@@ -2,6 +2,7 @@
 package com.bookadvisor.dao.model;
 
 import java.awt.Image;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
@@ -10,6 +11,7 @@ import java.util.List;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Critica implements Serializable {
@@ -19,10 +21,20 @@ public class Critica implements Serializable {
 	private String titulo;
 	private String cuerpo;
 	private String puntuacion;
-	private ArrayList criticas_list;
+	@ManyToOne
+	private FichaLibro fl;
 	
 	public Critica() {
-		this.criticas_list = new ArrayList<>();
+		
+	}
+	
+	public FichaLibro getFl() {
+		return this.fl;
+	}
+	
+	public Critica setFl(FichaLibro fl) {
+		this.fl = fl;
+		return this;
 	}
 
 	public Lector getAutor() {

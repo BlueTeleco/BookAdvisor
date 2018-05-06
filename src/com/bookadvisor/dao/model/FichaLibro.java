@@ -1,7 +1,8 @@
 package com.bookadvisor.dao.model;
 
-import java.awt.Image;
 import java.io.Serializable;
+import javax.persistence.FetchType;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -9,39 +10,33 @@ import java.util.List;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class FichaLibro implements Serializable {
-	
 	
 	@Id
 	private String titulo;
 	private String autor;
 	private String editorial;
-	//private String formato; ahora está en Exchange
-	//private String ISBN;
 	
-	/*@ElementCollection(targetClass=Critica.class)
-	private List<Critica> criticas;
-	@ElementCollection(targetClass=Exchange.class)
-	private List<Exchange> exchanges; // Lista de ISBN que intercambian ese libro
+	@OneToMany(mappedBy = "fl", fetch = FetchType.EAGER)
+	private List<Exchange> exchanges; 
 
-	*/
-	// La reseña de la editorial es una lista? Dont think so
-	@ElementCollection(targetClass=String.class)
-	private List<String> resenaEditorial;
-	
+	@OneToMany(mappedBy = "fl", fetch = FetchType.EAGER)
+	private List<Critica> criticas;
+
 	@ElementCollection(targetClass=String.class)
 	private List<String> bibliotecas; //OJOOOOOOOO FALTA METER LAS BIBLIOS CERCANAS 
+
+	private String resenaEditorial;
 	private String categoria;
-	private String date;
-	// private Image imagen;
+	private Date date;
 	
 	public FichaLibro() {
-		this.resenaEditorial = new ArrayList<>();
 		this.bibliotecas = new ArrayList<>();
-		//this.criticas = new ArrayList<>();
-		//this.exchanges = new ArrayList<>();
+		this.criticas = new ArrayList<>();
+		this.exchanges = new ArrayList<>();
 	}
 
 	public String getTitulo() {
@@ -71,30 +66,12 @@ public class FichaLibro implements Serializable {
 		return this;
 	}
 	
-	/*public String getFormato() {
-		return formato;
-	}
-	
-	public FichaLibro setFormato(String formato) {
-		this.formato = formato;
-		return this;
-	}
-	
-	public String getISBN() {
-		return ISBN;
-	}
-	
-	public FichaLibro setISBN(String ISBN) {
-		this.ISBN = ISBN;
-		return this;
-	}*/
-	
-	public List<String> getResEdit() {
+	public String getResEdit() {
 		return resenaEditorial;
 	}
 	
 	public FichaLibro setResEdit(String resenaEditorial) {
-		this.resenaEditorial.add(resenaEditorial);
+		this.resenaEditorial = resenaEditorial;
 		return this;
 	}
 	
@@ -107,12 +84,12 @@ public class FichaLibro implements Serializable {
 		return this;
 	}
 	
-	public String getDate() {
+	public Date getDate() {
 		return date;
 	}
 	
-	public FichaLibro setDate(String fecha) {
-		this.date = fecha;
+	public FichaLibro setDate(Date date) {
+		this.date = date;
 		return this;
 	}
 	
@@ -136,7 +113,7 @@ public class FichaLibro implements Serializable {
 		return this;
 	}
 	
-/*	public List<Critica> getCriticas() {
+	public List<Critica> getCriticas() {
 		return this.criticas;
 	}
 
@@ -153,5 +130,5 @@ public class FichaLibro implements Serializable {
 		this.exchanges = exchanges;
 		return this;
 	}
-	*/
+	
 }

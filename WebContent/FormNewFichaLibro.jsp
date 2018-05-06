@@ -1,6 +1,6 @@
 <form action="CreateFichaServlet" method="post">
 
-	<input type="text" name="title" placeholder="Titulo del libro" />
+	<input type="text" name="titulo" placeholder="Titulo del libro" />
 	<input type="text" name="autor" placeholder="Autor del libro" />
 	<input type="text" name="editorial" placeholder="Editorial del libro" /><br/>
 

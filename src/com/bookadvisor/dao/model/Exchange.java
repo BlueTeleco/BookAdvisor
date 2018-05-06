@@ -1,6 +1,7 @@
 package com.bookadvisor.dao.model;
 
 import java.awt.Image;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
@@ -9,19 +10,20 @@ import java.util.List;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Exchange implements Serializable {
 	
 	@Id
 	private String ISBN;
-	// ForeingKey con ficha de libro
 	private String FichaLibro;
-	// Foreingkey con el lector dueño del intercambio
 	private String email;
 	private String info;
 	private String estado;
 	private String formato;
+	@ManyToOne
+	private FichaLibro fl;
 	
 	public String getEmail() {
 		return this.email;
@@ -47,6 +49,15 @@ public class Exchange implements Serializable {
 	
 	public Exchange setISBN(String ISBN) {
 		this.ISBN = ISBN;
+		return this;
+	}
+	
+	public FichaLibro getFl() {
+		return fl;
+	}
+	
+	public Exchange setFl(FichaLibro fl) {
+		this.fl = fl;
 		return this;
 	}
 	
