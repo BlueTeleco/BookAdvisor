@@ -27,6 +27,7 @@ public class FichaLibroDAOImplementation implements FichaLibroDAO {
 			session.save(ficha);
 			session.getTransaction().commit();
 		} catch (Exception e) {
+			e.printStackTrace();
 		} finally {
 				session.close();
 		}

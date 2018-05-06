@@ -1,6 +1,5 @@
 package com.bookadvisor.dao.model;
 
-import java.awt.Image;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
@@ -13,29 +12,25 @@ import javax.persistence.Id;
 @Entity
 public class FichaLibro implements Serializable {
 	
-	
 	@Id
 	private String titulo;
 	private String autor;
 	private String editorial;
-	//private String formato; ahora está en Exchange
-	//private String ISBN;
 	
 	@ElementCollection(targetClass=Exchange.class)
-	private List<Exchange> exchanges; // Lista de ISBN que intercambian ese libro
-	// La reseña de la editorial es una lista? Dont think so
-	@ElementCollection(targetClass=String.class)
-	private List<String> resenaEditorial;
+	private List<Exchange> exchanges; 
+
 	@ElementCollection(targetClass=Critica.class)
 	private List<Critica> criticas;
+
 	@ElementCollection(targetClass=String.class)
 	private List<String> bibliotecas; //OJOOOOOOOO FALTA METER LAS BIBLIOS CERCANAS 
+
+	private String resenaEditorial;
 	private String categoria;
 	private Date date;
-	// private Image imagen;
 	
 	public FichaLibro() {
-		this.resenaEditorial = new ArrayList<>();
 		this.bibliotecas = new ArrayList<>();
 		this.criticas = new ArrayList<>();
 		this.exchanges = new ArrayList<>();
@@ -68,30 +63,12 @@ public class FichaLibro implements Serializable {
 		return this;
 	}
 	
-	/*public String getFormato() {
-		return formato;
-	}
-	
-	public FichaLibro setFormato(String formato) {
-		this.formato = formato;
-		return this;
-	}
-	
-	public String getISBN() {
-		return ISBN;
-	}
-	
-	public FichaLibro setISBN(String ISBN) {
-		this.ISBN = ISBN;
-		return this;
-	}*/
-	
-	public List<String> getResEdit() {
+	public String getResEdit() {
 		return resenaEditorial;
 	}
 	
 	public FichaLibro setResEdit(String resenaEditorial) {
-		this.resenaEditorial.add(resenaEditorial);
+		this.resenaEditorial = resenaEditorial;
 		return this;
 	}
 	
