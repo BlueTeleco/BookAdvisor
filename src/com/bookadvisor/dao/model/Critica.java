@@ -17,7 +17,7 @@ import javax.persistence.ManyToOne;
 public class Critica implements Serializable {
 	
 	@Id
-	private Lector autor;
+	private String autor;
 	private String titulo;
 	private String cuerpo;
 	private String puntuacion;
@@ -37,7 +37,7 @@ public class Critica implements Serializable {
 		return this;
 	}
 
-	public Lector getAutor() {
+	public String getAutor() {
 		return this.autor;
 	}
 
@@ -49,11 +49,15 @@ public class Critica implements Serializable {
 		return this.titulo;
 	}
 	
+	public String getPuntuacion() {
+		return this.puntuacion;
+	}
+	
 	public Critica setTexto(String cuerpo) {
 		this.cuerpo = cuerpo;
 		return this;
 	}
-	public Critica setAutor(Lector autor) {
+	public Critica setAutor(String autor) {
 		this.autor = autor;
 		return this;
 	}
