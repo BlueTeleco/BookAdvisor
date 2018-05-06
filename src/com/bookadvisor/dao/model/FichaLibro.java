@@ -1,6 +1,7 @@
 package com.bookadvisor.dao.model;
 
 import java.io.Serializable;
+
 import javax.persistence.FetchType;
 
 import java.util.ArrayList;
