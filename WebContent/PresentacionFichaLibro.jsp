@@ -130,11 +130,11 @@
                 
                 <h5>Puntúa la ficha:</h5>
             <span>
-				<input type="radio" name="rating" value="1">&#9733;</input>
-				<input type="radio" name="rating" value="2">&#9733;</input>
-				<input type="radio" name="rating" value="3">&#9733;</input>
-				<input type="radio" name="rating" value="4">&#9733;</input>
-				<input type="radio" name="rating" value="5">&#9733;</input>
+				<input type="radio" name="rating" value="1/5">1/5</input>
+				<input type="radio" name="rating" value="2/5">2/5</input>
+				<input type="radio" name="rating" value="3/5">3/5</input>
+				<input type="radio" name="rating" value="4/5">4/5</input>
+				<input type="radio" name="rating" value="5/5">5/5</input>
 			</span> <br><br>
            <noscript>Necesitas tener habilitado javascript para poder votar</noscript>
                 <input class="btn btn-primary" type="submit" value="Crear nueva crítica" style="background-color:#42DCA3;"></input>
@@ -145,14 +145,11 @@
           <hr> <br>
 			<div>
 			<h4> Críticas de otros lectores:</h4>
-			<select>
 					<c:forEach items="${fl.getCriticas()}" var="criticai">
-			 		<h3><c:out value="${criticai.getTitulo()}"/></h3>
-			 		<p><c:out value="${criticai.getTexto()}"/></p>
-			 		<strong>Firmado: <c:out value="${criticai.getAutor().getNombre()}"/></strong><br>		 
-			 		 
+				 		<h3><c:out value="${criticai.getTitulo()}"/><p>  </p><c:out value="${criticai.getTitulo()}"/></h3>
+				 		<p><c:out value="${criticai.getTexto()}"/></p>
+				 		<strong>Firmado: <c:out value="${criticai.getAutor()}"/></strong></br></br>		 
 					</c:forEach>
-				</select>
 			</div>
 			</div>
         </div>
@@ -187,16 +184,14 @@
           <br><hr><br><br>
           <h4> Lectores que ofrecen intercambio de libros:</h4>
           <div>
-        <%-- <select>
 			<c:forEach items="${fl.getExchanges()}" var="exchangei">
 			 	<h3><c:out value="${exchangei.getTitulo()}"/></h3>
 			 	<p>Email de contacto: <c:out value="${exchangei.getEmail()}"/></p>
 			 	<p>Formato: <c:out value="${exchangei.getFormato()}"/></p>
 			 	<p>Estado del libro: <c:out value="${exchangei.getEstado()}"/></p>
 			 	<p>ISBN: <c:out value="${exchangei.getISBN()}"/></p>
-			 	<p>Información adicional: <c:out value="${exchangei.getInfo()}"/></p> <br>
+			 	<p>Información adicional: <c:out value="${exchangei.getInfo()}"/></p> </br></br>
 			</c:forEach>
-		</select> --%>
 	</div>
 			<br>
           <hr>

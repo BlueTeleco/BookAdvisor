@@ -17,13 +17,14 @@ public class Exchange implements Serializable {
 	
 	@Id
 	private String ISBN;
-	private String FichaLibro;
+	//@ManyToOne
+	private FichaLibro fll;
 	private String email;
 	private String info;
 	private String estado;
 	private String formato;
-//	ManyToOne
-//	private FichaLibro fl;
+	private FichaLibro fl;
+
 	
 	public String getEmail() {
 		return this.email;
@@ -61,6 +62,16 @@ public class Exchange implements Serializable {
 		return this;
 	}
 	*/
+	
+	
+	public FichaLibro getFl() {
+		return this.fl;
+	}
+	
+	public Exchange setFl(FichaLibro fl) {
+		this.fl = fl;
+		return this;
+	}
 	public String getInfo() {
 		return info;
 	}

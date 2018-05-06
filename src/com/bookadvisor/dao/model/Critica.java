@@ -3,6 +3,7 @@ package com.bookadvisor.dao.model;
 
 import java.awt.Image;
 
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
@@ -16,9 +17,10 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Critica implements Serializable {
 	
-	@Id
+	
 	private String autor;
 	private String titulo;
+	@Id
 	private String cuerpo;
 	private String puntuacion;
 	@ManyToOne
