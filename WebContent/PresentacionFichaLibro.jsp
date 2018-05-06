@@ -42,7 +42,7 @@
               <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#nav-ficha" role="tab" aria-controls="nav-home" aria-selected="true" >Home</a>
             </li>
             <li class="nav-item">
-             <a class="nav-link" id="nav-critica-tab" data-toggle="pill" href="#nav-critica" role="tab" aria-controls="nav-critica" aria-selected="false" >CrÃ­ticas</a>
+             <a class="nav-link" id="nav-critica-tab" data-toggle="pill" href="#nav-critica" role="tab" aria-controls="nav-critica" aria-selected="false" >Críticas</a>
             </li>
             <li class="nav-item">
              <a class="nav-link" id="nav-intercambio-tab" data-toggle="pill" href="#nav-intercambio" role="tab" aria-controls="nav-intercambio" aria-selected="false">Intercambio de libros</a>
@@ -51,6 +51,7 @@
              <a class="nav-link" id="nav-biblioteca-tab" data-toggle="pill" href="#nav-biblioteca" role="tab" aria-controls="nav-biblioteca" aria-selected="false" >Bibliotecas</a>
             </li>
           </ul>
+          </nav>
       <br><hr>
       </div></div>
 
@@ -65,60 +66,40 @@
         <div>
 
           <!-- Title -->
-          <h1 class="mt-4">La chica del tren</h1>
-
-          <!-- Author -->
-          <p class="lead">
-            by
-            <a href="#">Juan PÃ©rez</a>
-          </p>
+          <h1 class="mt-4"><c:out value="${fl.getTitulo()}"/></h1></h1>
 
           <hr>
 
-          <!-- Date/Time -->
-          <p>Posted on January 1, 2018 at 12:00 PM</p>
-		
           <br>
           <!-- Preview Image -->
           <div class="container">
           <div class="row my-8">
-        <div class="col-lg-3">
-        	<h1><c:out value="${fl.getTitulo()}"/></h1>
-			<img  class="img-fluid rounded" src="https://imagessl1.casadellibro.com/a/l/t0/71/9788408141471.jpg" alt="" style = "height:20rem;">        </div>
+        <div class="col-lg-4">
+        	<br>
+        	<center>
+			<img class="img-fluid rounded" src="https://imagessl1.casadellibro.com/a/l/t0/71/9788408141471.jpg" alt="" style = "height:35rem;">        </div>
+			</center>        
         <!-- /.col-lg-8 -->
         <div class="col-lg-8">
-          <h5>Autor/a del libro: <c:out value="${fl.getAutor()}"/></h5>  <br>
-          <h5>Editorial del libro: Editorial: <c:out value="${fl.getAutor()}"/></h5> <br>
-          <h5>Fecha de publicación de libro:<c:out value="${fl.getDate() }"/></h5> <br>
-          <h5>Categoría del libro:</h5> <c:out value="${fl.getCategoria()}"/><br>
-          <h5>Reseña de la editorial:</h5> <c:out value="${fl.getResEdit()}"/> <br>
+          <br><br>
+          <h5>  <strong style="color:#42DCA3">Autor/a del libro: </strong><h5> <c:out value="${fl.getAutor()}"/> autor</h5></h5> <br><br><br>
+          <h5> <strong style="color:#42DCA3"> Editorial del libro: </strong> <h5> <c:out value="${fl.getEditorial()}"/> editorial</h5></h5> <br><br><br>
+          <h5> <strong style="color:#42DCA3"> Fecha de publicación de libro:</strong> <h5> <c:out value="${fl.getDate()}"/> fecha </h5></h5> <br><br><br>
+          <h5> <strong  style="color:#42DCA3"> Categoría del libro:</strong> <h5> <c:out value="${fl.getCategoria()}"/> categoria</h5><br><br>
+          
         </div>
         </div>
         <!-- /.col-md-4 -->
       </div>
           
-          <br>
+          <br><br>
           <hr>
 
           <!-- Post Content -->
-          <p class="lead"> La chica del tren es un excelente thriller psicolÃ³gico que viene avalado por el enorme Ã©xito cosechado en el mercado anglosajÃ³n. Tanto es asÃ­ que Dreamworks ya ha adquirido los derechos para hacer la versiÃ³n cinematogrÃ¡fica. </p>
-
-          <p>La protagonista, Rachel Watson, es una mujer deprimida. El divorcio de su exmarido le ha condenado al alcoholismo. Todos los dÃ­as toma en Londres el tren de las 8:04. En el trayecto siempre observa a una pareja que parece tiene una vida perfecta, pero un dÃ­a ve algo y, la chica a la que ella llamaba Jess, desaparece... </p>
-
-          <p>Con este argumento, que nos recuerda a la pelÃ­cula La ventana indiscreta de Alfred Hitchcock, la autora Paula Hawkins construye una buena historia. Con capÃ­tulos cortos y utilizando el punto de vista de 3 de los personajes de la novela; Rachel, Jess (Megan) y Anna (actual pareja de su ex); la narraciÃ³n es Ã¡gil y brillante. Con un ritmo que va in crescendo y unos giros inesperados, la lectura se vuelve adictiva, absorbente y en ocasiones claustrofÃ³bica. Cuidado porque nada es lo que parece. </p>
           
-
-         
-
-          <blockquote class="blockquote">
-            <p class="mb-0">Tenemos entre la manos el mÃ¡s que probable Ã©xito del verano.</p>
-            <footer class="blockquote-footer">Lector de
-              <cite title="Source Title">La chica del tren</cite>
-            </footer>
-          </blockquote>
-
-          <p>En resumen, tenemos entre la manos el mÃ¡s que probable Ã©xito del verano. Un estupendo thriller psicolÃ³gico, con unos personajes bien definidos, narrado de forma Ã¡gil y dinÃ¡mica y que nos hace vivir momentos de tensiÃ³n y angustia. Muy recomendable. </p>
-
+		<h5> <strong  style="color:#42DCA3"> Reseña de la editorial: </strong> </h5> <br><br>
+		<h5><c:out value="${fl.getResEdit()}"/> texto</h5> <br>
+ 
             <br><br><hr>
         
       </div>
@@ -134,17 +115,18 @@
           <br><br><br><br>
           
           
-           <form action="CreateCriticaServlet">
+           
           <div>
           <div class="card my-4">
-            <h5 class="card-header">Deja una crÃ­tica de la ficha</h5>
+            <h5 class="card-header">Deja una crí­tica de la ficha</h5>
             <div class="card-body">
                 <div class="form-group">
+                <form action="CreateCriticaServlet">
                 <input type="text" class="form-control" name="titulo" placeholder="Titulo de la crítica..."><br>
 					<br/>
 				<textarea class="form-control" rows="3" name="cuerpo" rows="4" cols="50" placeholder="Descripción de la crítica..."></textarea>
 				<br/>
-                </div>
+                
                 <h5>Puntúa la ficha:</h5>
             <span>
 				<input type="radio" name="rating" value="1">&#9733;</input>
@@ -156,64 +138,22 @@
            <noscript>Necesitas tener habilitado javascript para poder votar</noscript>
                 <input class="btn btn-primary" type="submit" value="Crear nueva crítica" style="background-color:#42DCA3;"></input>
               </form>
+              </div>
             </div>
           </div> <br><br>
-         </div> <hr> <br>
+          <hr> <br>
 			<div>
-	   			 <h4>Críticas de otros lectores:</h4>
+			<h4> Críticas de otros lectores:</h4>
+			<select>
 					<c:forEach items="${fl.getCriticas()}" var="criticai">
 			 		<h3><c:out value="${criticai.getTitulo()}"/></h3>
 			 		<p><c:out value="${criticai.getTexto()}"/></p>
-			 		<strong>Firmado: <c:out value="${criticai.getAutor().getNombre()}"/></strong></br>		 
+			 		<strong>Firmado: <c:out value="${criticai.getAutor().getNombre()}"/></strong><br>		 
 			 		 
 					</c:forEach>
+				</select>
 			</div>
-          <!-- Single Comment -->
-          <div>
-          <div class="media mb-4">
-            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-            <div class="media-body">
-              <h5 class="mt-0">Comentario </h5>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-            </div>
-          </div>
-
-            <div class="ec-stars-wrapper">
-              <a href="#" data-value="1" title="Votar con 1 estrellas">&#9733;</a>
-              <a href="#" data-value="2" title="Votar con 2 estrellas">&#9733;</a>
-              <a href="#" data-value="3" title="Votar con 3 estrellas">&#9733;</a>
-              <a href="#" data-value="4" title="Votar con 4 estrellas">&#9733;</a>
-              <a href="#" data-value="5" title="Votar con 5 estrellas">&#9733;</a>
-          </div>
-         <noscript>Necesitas tener habilitado javascript para poder votar</noscript>
-      </div>
-
-          <!-- Comment with nested comments -->
-          <div class="media mb-4">
-            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-            <div class="media-body">
-              <h5 class="mt-0">Comentario </h5>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-
-              <div class="media mt-4">
-                <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-                <div class="media-body">
-                  <h5 class="mt-0">Comentario respuesta</h5>
-                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                </div>
-              </div>
-
-              <div class="media mt-4">
-                <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-                <div class="media-body">
-                  <h5 class="mt-0">Comentario respuesta</h5>
-                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                </div>
-              </div>
-
-            </div>
-          </div>
-
+			</div>
         </div>
 
   
@@ -222,39 +162,42 @@
   <div  class="tab-pane fade" id="nav-intercambio" role="tabpanel" aria-labelledby="nav-intercambio-tab">
           <!-- Comments Form -->
           <br><br>
-          <form action="CreateExchangeServlet">
           
-          <br><br><div>
+          <br><br>
+          <div>
           <div class="card my-4">
             <h5 class="card-header">Proponer un intercambio</h5>
             <div class="card-body">
-              <form>
                 <div class="form-group">
-                  <input type="text" class="form-control" name="formato" placeholder="Formato de mi libro">
-					<br><br>
-				<input type="text" class="form-control" name="estado" placeholder="Estado de mi libro">
-					<br><br>
-				<input type="text" class="form-control" name="ISBN" placeholder="ISBN de mi libro">
-					<br><br>
-				<textarea name="info" class="form-control" rows="4" cols="50" rows="3" placeholder="Condiciones del intercambio"></textarea>
-					<br><br>
-				<input type="submit" class="form-control" class="btn btn-primary" value="Crear propuesta de intercambio" style="background-color:#42DCA3;"></input>
-                </div>
-              </form>
+                	<form action="CreateExchangeServlet">
+                 	 <input type="text" class="form-control" name="formato" placeholder="Formato de mi libro">
+						<br><br>
+					 <input type="text" class="form-control" name="estado" placeholder="Estado de mi libro">
+						<br><br>
+					 <input type="text" class="form-control" name="ISBN" placeholder="ISBN de mi libro">
+						<br><br>
+					 <textarea name="info" class="form-control" rows="4" cols="50" rows="3" placeholder="Condiciones del intercambio"></textarea>
+						<br><br>
+					 <input type="submit" class="form-control" class="btn btn-primary" value="Crear propuesta de intercambio" style="background-color:#42DCA3;"></input>
+             		</form>
+              	</div>
             </div>
           </div>
           <br><hr><br><br>
           <h4> Lectores que ofrecen intercambio de libros:</h4>
           <div>
-		
+        <%-- <select>
+			<c:forEach items="${fl.getExchanges()}" var="exchangei">
+			 	<h3><c:out value="${exchangei.getTitulo()}"/></h3>
+			 	<p>Email de contacto: <c:out value="${exchangei.getEmail()}"/></p>
+			 	<p>Formato: <c:out value="${exchangei.getFormato()}"/></p>
+			 	<p>Estado del libro: <c:out value="${exchangei.getEstado()}"/></p>
+			 	<p>ISBN: <c:out value="${exchangei.getISBN()}"/></p>
+			 	<p>Información adicional: <c:out value="${exchangei.getInfo()}"/></p> <br>
+			</c:forEach>
+		</select> --%>
 	</div>
-			<div class="media mb-4">
-            	<img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-            	<div class="media-body">
-            	  <h5 class="mt-0">Comentario </h5>
-             	 Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-           	</div>
-          </div> <br>
+			<br>
           <hr>
           <br>
 
@@ -263,37 +206,87 @@
 
   <div  class="tab-pane fade" id="nav-biblioteca" role="tabpanel" aria-labelledby="nav-biblioteca-tab">
          	
-            <br><br><br><br><h5 class="card-header" style= >Bibliotecas mÃ¡s cercanas con disponibilidad del producto</h5>
+            <br><br><br><br><h5 class="card-header">Bibliotecas más cercanas con disponibilidad del producto                                          </h5>
             <div class="card-body">
 
                <!-- Map Section -->
-               <br><br> 
-            <div align="center"><h3 style="color:grey"> Biblioteca ETSIT UPM</h3>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.0339945498727!2d-3.7284007851684966!3d40.45238456139523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422834b7a8fb4d%3A0x2a3c66a12ada73f9!2sUPM+Escuela+T%C3%A9cnica+Superior+de+Ingenieros+de+Telecomunicaci%C3%B3n!5e0!3m2!1ses!2ses!4v1525527190219" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div> <br><br><br><br><br><br><br>
+               <br><br>  
+               <div class="row">
+       			<div class="col-lg-4">
+            <div align="center">
+            	<br><br><br><br>
+            	<h3 style="color:grey;"> Biblioteca ETSIT UPM</h3> <br> <br>
+           		<h4 style="color:#CD5C5C; font-size:20px; margin: 0 0 10px;"> Distancia:	5km</h4> <br>
+              	<h4 style="color:#CD5C5C; font-size:15px;  margin: 0 0 10px;"> Disponibilidad:	3 libros</h4> <br>
+              	<h4 style="color:#CD5C5C; font-size:15px;  margin: 0 0 10px;"> Horario:	9:00-21:00</h4>
+              </div>
+              </div>
+              <div class="col-lg-4">
+              <div align="center">
+              <br><br>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.0339945498727!2d-3.7284007851684966!3d40.45238456139523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422834b7a8fb4d%3A0x2a3c66a12ada73f9!2sUPM+Escuela+T%C3%A9cnica+Superior+de+Ingenieros+de+Telecomunicaci%C3%B3n!5e0!3m2!1ses!2ses!4v1525527190219" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+               <br><br><br><br><br><br><br>
+				
+            </div>
+            </div>
+            </div>
+            <br><hr>
+            
+            <div class="row">
+       			<div class="col-lg-4">
+            <div align="center">
+            	<br><br><br><br>
+            	<h3 style="color:grey;"> Biblioteca Nacional de España</h3> <br> <br>
+           		<h4 style="color:#CD5C5C; font-size:20px; margin: 0 0 10px;"> Distancia:	3km</h4> <br>
+              	<h4 style="color:#CD5C5C; font-size:15px;  margin: 0 0 10px;"> Disponibilidad:	5 libros</h4> <br>
+              	<h4 style="color:#CD5C5C; font-size:15px;  margin: 0 0 10px;"> Horario:	9:00-20:00</h4>
+              </div>
+              </div>
+              <div class="col-lg-4">
+              <div align="center">
+              <br><br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.3384101078263!2d-3.6916264493963467!3d40.42350487926302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4228907e039627%3A0xd5b5764d8a0a53f7!2sBiblioteca+Nacional+de+Espa%C3%B1a!5e0!3m2!1ses!2ses!4v1525641835562" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+               <br><br><br><br><br><br><br>
+				
+            </div>
+            </div>
+            </div>
+            
+            <br> <hr>
+            <div class="row">
+       			<div class="col-lg-4">
+            <div align="center">
+            	<br><br><br><br>
+            	<h3 style="color:grey;"> Biblioteca Municipal León Tolstoi</h3> <br> <br>
+           		<h4 style="color:#CD5C5C; font-size:20px; margin: 0 0 10px;"> Distancia:	7km</h4> <br>
+              	<h4 style="color:#CD5C5C; font-size:15px;  margin: 0 0 10px;"> Disponibilidad:	2 libros</h4> <br>
+              	<h4 style="color:#CD5C5C; font-size:15px;  margin: 0 0 10px;"> Horario:	10:00-19:30</h4>
+              </div>
+              </div>
+              <div class="col-lg-4">
+              <div align="center">
+              <br><br>
+            <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3032.7887896140924!2d-3.8935320851660475!3d40.52415925702377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd418324023c0ba9%3A0x241e4c45c9c6e546!2sBiblioteca+Municipal+Le%C3%B3n+Tolst%C3%B3i!5e0!3m2!1ses!2ses!4v1525527249786" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen ></iframe>
+               <br><br><br><br><br><br><br>
+				
+            </div>
+            </div>
+            </div>
+            
+            <br> <hr><br><br><br><br><br>
 
             
-            <div align="center"><h3 style="color:grey"> Biblioteca Nacional de EspaÃ±a</h3>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.338225704359!2d-3.691621085169501!3d40.423508963152194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4228907e039627%3A0xd5b5764d8a0a53f7!2sBiblioteca+Nacional+de+Espa%C3%B1a!5e0!3m2!1ses!2ses!4v1525527143693" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div> <br><br><br><br><br><br>
-
-            <div align="center"><h3 style="color:grey; text-align:center;"> Biblioteca Municipal LeÃ³n Tolstoi</h3>
-            <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3032.7887896140924!2d-3.8935320851660475!3d40.52415925702377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd418324023c0ba9%3A0x241e4c45c9c6e546!2sBiblioteca+Municipal+Le%C3%B3n+Tolst%C3%B3i!5e0!3m2!1ses!2ses!4v1525527249786" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen ></iframe></div>
 
               
             </div>
           </div>
-            
-          </div>
+            </div>
+         </div>
           <br>
-
-         
-          
-      </div>
-    </div> 
-  </div>
+ 
 		<br><br>     
       <!-- /.row -->
 
-    </div>
     <!-- /.container -->
     <br><br>
 

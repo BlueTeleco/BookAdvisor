@@ -35,6 +35,7 @@ public class CreateCriticaServlet extends HttpServlet {
 		
 		System.out.println("autor: " +autor.getNombre());
 		System.out.println("esta vacio? "+CriticaDAOImplementation.getInstance().getAll().isEmpty());
+		System.out.println("critica "+CriticaDAOImplementation.getInstance());
 		System.out.println("Autor de la critica: "+CriticaDAOImplementation.getInstance().read(autor.getNombre()));
 		System.out.println("cuerpo de la critica: "+CriticaDAOImplementation.getInstance().read(autor.getNombre()).getTexto());
 		System.out.println("Titulo de la critica: "+CriticaDAOImplementation.getInstance().read(autor.getNombre()).getTitulo());

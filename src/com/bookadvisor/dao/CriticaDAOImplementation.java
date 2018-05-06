@@ -7,6 +7,7 @@ import java.util.List;
 import org.hibernate.Session;
 
 import com.bookadvisor.dao.model.Critica;
+import com.bookadvisor.dao.model.Lector;
 
 public class CriticaDAOImplementation implements CriticaDAO {
 	
