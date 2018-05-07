@@ -24,6 +24,13 @@
 
     <!-- Custom styles for this template -->
     <link href="css/sesion.css" rel="stylesheet">
+    
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/ficha.css" rel="stylesheet">
+    <link href="css/footer.css.css" rel="stylesheet">
 
   </head>
 
@@ -61,7 +68,7 @@
 
   <br><br><br>
   <section id="about" >
-      <h1 class="media-heading">O, si eres nuevo por aquí... ¡a qué esperas para registrarte! </h1>
+      <h1 class="media-heading">Registrarse </h1>
       <%@ include file = "FormNewUser.jsp" %>
       <%@ include file = "FormNewPublicista.jsp" %>
   </section>
