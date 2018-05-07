@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <form action="CreateFichaServlet" method="post">
 
 	<span class="contact100-form-title">
@@ -5,7 +7,7 @@
 				</span>
 
             <div class="wrap-input100 validate-input bg1" data-validate="Please Type Your Name">
-                <span class="label-input100">Titulo *</span>
+                <span class="label-input100">Título *</span>
                 <input class="input100" type="text" name="title" placeholder="Introduzca el titulo del libro">
             </div>
 <center>
@@ -46,7 +48,7 @@
 
 
             <div class="wrap-input100 validate-input bg0 rs1-alert-validate" data-validate = "Please Type Your Message">
-                <span class="label-input100">Descripcion</span>
+                <span class="label-input100">Descripción</span>
                 <textarea class="input100" name="resenaEditorial" placeholder="Comentarios sobre el libro seleccionado"></textarea>
             </div>
 
