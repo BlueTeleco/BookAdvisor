@@ -145,7 +145,7 @@ a:focus, a:hover {
   font-size: 18px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 2768px) {
   .masthead {
     height: 100%;
     padding: 0;

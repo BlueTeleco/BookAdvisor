@@ -5,7 +5,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <html lang="en">
 
-	<head>
+	<head >
 	
 		<meta charset="utf-8">
    		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -28,11 +28,12 @@
 	
 	</head>
  
- 	<body id="page-top">
+ 	<body id="page-top" style="background-color:black" >
+ 	
 	
 	    <!-- Navigation -->
 	  	<%@ include file = "NavigationBar.jsp" %>
-    <br><br><br>
+    <br><br><div style="background-color:white"><br>
 
     <div class="container" >
       <div id="home">
@@ -289,7 +290,7 @@
 
     <!-- /.container -->
     <br><br>
-
+</div>
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
