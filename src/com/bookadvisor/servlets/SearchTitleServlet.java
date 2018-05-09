@@ -1,6 +1,7 @@
 package com.bookadvisor.servlets;
 
 import java.io.IOException;
+
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -23,9 +24,9 @@ public class SearchTitleServlet extends HttpServlet {
 		List<FichaLibro> result = FichaLibroDAOImplementation
 														.getInstance()
 														.getAll()
-														.stream()
+														.stream() //los pasa de lista a collection
 														.filter(book -> book.getTitulo().contains(query))
-														.collect(Collectors.toList());
+														.collect(Collectors.toList()); //de collection a lista
 
 		req.getSession().setAttribute("list_result", result);
 	    resp.sendRedirect(req.getContextPath() + "/Busqueda.jsp");

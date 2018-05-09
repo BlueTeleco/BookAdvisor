@@ -32,8 +32,8 @@ public class DataLectorServlet extends HttpServlet {
 		List<Critica> criticas_list_aux = CriticaDAOImplementation.getInstance().getAll();
 		if(criticas_list_aux.size() > 0) {
 			for(Critica c: criticas_list_aux) {
-				if(c.getAutor().getNombre().equals(lectorX.getNombre())) {
-					criticas_titulo.add(c.getTitulo());
+				if(c.getAutor().equals(lectorX.getNombre())) {
+					criticas_titulo.add(c.getTitulo()+": "+c.getTexto());
 				}
 			}
 			System.out.println("Numero de criticas de mi usuario: "+criticas_titulo.size()); 		

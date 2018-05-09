@@ -1,6 +1,9 @@
 package com.bookadvisor.dao.model;
 
 import java.io.Serializable;
+
+import javax.persistence.FetchType;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -8,6 +11,7 @@ import java.util.List;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class FichaLibro implements Serializable {
@@ -17,23 +21,23 @@ public class FichaLibro implements Serializable {
 	private String autor;
 	private String editorial;
 	
-	@ElementCollection(targetClass=Exchange.class)
+	//@OneToMany(mappedBy = "fll", fetch = FetchType.LAZY)
 	private List<Exchange> exchanges; 
 
-	@ElementCollection(targetClass=Critica.class)
+	@OneToMany(mappedBy = "fl", fetch = FetchType.EAGER)
 	private List<Critica> criticas;
 
-	@ElementCollection(targetClass=String.class)
-	private List<String> bibliotecas; //OJOOOOOOOO FALTA METER LAS BIBLIOS CERCANAS 
+	//@ElementCollection(targetClass=String.class) MOCK UP
+	//private List<String> bibliotecas;  
 
 	private String resenaEditorial;
 	private String categoria;
 	private Date date;
 	
 	public FichaLibro() {
-		this.bibliotecas = new ArrayList<>();
+		//this.bibliotecas = new ArrayList<>();
 		this.criticas = new ArrayList<>();
-		this.exchanges = new ArrayList<>();
+		//this.exchanges = new ArrayList<>();
 	}
 
 	public String getTitulo() {
@@ -101,14 +105,14 @@ public class FichaLibro implements Serializable {
 	}
 	*/
 
-	public List<String> getBibliotecas() {
-		return bibliotecas;
-	}
-
-	public FichaLibro setBibliotecas(List<String> bibliotecas) {
-		this.bibliotecas = bibliotecas;
-		return this;
-	}
+//	public List<String> getBibliotecas() {  MOCK UP
+//		return bibliotecas;
+//	}
+//
+//	public FichaLibro setBibliotecas(List<String> bibliotecas) {  MOCK UP
+//		this.bibliotecas = bibliotecas;
+//		return this;
+//	}
 	
 	public List<Critica> getCriticas() {
 		return this.criticas;

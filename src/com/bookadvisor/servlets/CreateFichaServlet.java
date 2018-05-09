@@ -39,8 +39,16 @@ public class CreateFichaServlet extends HttpServlet {
 									.setCategoria(categoria)
 									.setDate(date)
 									.setResEdit(resenaEditorial);
+			 
 			
 			FichaLibroDAOImplementation.getInstance().create(libro);
+			System.out.println("Autor: "+FichaLibroDAOImplementation.getInstance().read(titulo).getAutor());
+			System.out.println("Titulo: "+FichaLibroDAOImplementation.getInstance().read(titulo).getTitulo());
+			System.out.println("fecha: "+FichaLibroDAOImplementation.getInstance().read(titulo).getDate());
+			System.out.println("Editorial: "+FichaLibroDAOImplementation.getInstance().read(titulo).getEditorial());
+			System.out.println("Resena: "+FichaLibroDAOImplementation.getInstance().read(titulo).getResEdit());
+			System.out.println("Categoria: "+FichaLibroDAOImplementation.getInstance().read(titulo).getCategoria());		
+			
 			resp.sendRedirect(req.getContextPath() + "/index.jsp");
 		} catch (ParseException e) {
 			e.printStackTrace();

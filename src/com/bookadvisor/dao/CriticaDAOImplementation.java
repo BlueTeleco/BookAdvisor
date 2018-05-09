@@ -1,11 +1,13 @@
 package com.bookadvisor.dao;
 
 import java.util.ArrayList;
+
 import java.util.List;
 
 import org.hibernate.Session;
 
 import com.bookadvisor.dao.model.Critica;
+import com.bookadvisor.dao.model.Lector;
 
 public class CriticaDAOImplementation implements CriticaDAO {
 	
@@ -34,14 +36,14 @@ public class CriticaDAOImplementation implements CriticaDAO {
 	@Override
 	public Critica read(String autor){
 		Session session = SessionFactoryService.get().openSession();
-		Critica libro = null;
+		Critica cri = null;
 		try {
-			libro = session.get(Critica.class, autor);
+			cri = session.get(Critica.class, autor);
 		} catch (Exception e) {
 		} finally {
 			session.close();
 		}		
-		return libro;
+		return cri;
 	}
 		
 	@Override
