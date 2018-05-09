@@ -34,8 +34,8 @@
                 <!--left col-->
                 <ul class="list-group">
                     <li class="list-group-item text-muted" contenteditable="false">Perfil</li>
-                    <li class="list-group-item text-right"><span class="pull-left"><strong style="color:black">Nombre:  ${lector.getNombre()} </strong></span> </li>
-                    <li class="list-group-item text-right"><span class="pull-left"><strong style="color:black">Email: ${lector.getEmail()}</strong></span> </li>
+                    <li class="list-group-item text-right"><span><strong class="pull-left" style="color:black">Nombre:  ${lector.getNombre()} </strong><button class="pull-right" id="button2" style="color:black">Editar</button></span> </li>
+                    <li class="list-group-item text-right"><span><strong class="pull-left" style="color:black">Email: ${lector.getEmail()}</strong><button id="button2" style="color:black">Editar</button></span> </li>
                     <li class="list-group-item text-right"><span class="pull-left"><strong style="color:black">Role: Lector </strong></span> 
                     
 
