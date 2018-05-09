@@ -33,11 +33,6 @@
   	<%@ include file = "NavigationBar.jsp" %>
 
    
-
-  
-
-
-
                                             <!-- Page Content -->
 
 <br><br> <br><br>
@@ -53,56 +48,9 @@
           
           <br><br><br><h1 class="my-4"> Resultados de tu búsqueda </h1> <br><br>
 
-          <div class="row">
-        <div class="col-lg-3 col-sm-6 mb-4" style = "height: 20rem;">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="https://imagessl9.casadellibro.com/a/l/t0/59/9788417108359.jpg" alt="" style = "height:14rem;"></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">La bruja <br/>  <h6> Camila Läckberg </h6>
-              </h4>
-              
-            </div>
-          </div>
-
-        </div>
-         <div class="col-lg-3 col-sm-6 mb-4" style = "height: 20rem;">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="https://imagessl6.casadellibro.com/a/l/t0/96/9788490663196.jpg" alt="" style = "height:14rem;"></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#">Patria <br/>  <h6> Fernando Aramburu </h6> </a>
-              </h4>
-              
-            </div>
-          </div>
-        </div> 
-
-      <div class="col-lg-3 col-sm-6 mb-4" style = "height: 20rem;">
-          <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="https://imagessl8.casadellibro.com/a/l/t0/78/9788408114178.jpg" alt="" style = "height:14rem;"></a>
-            <div class="card-body">
-                <h4 class="card-title">
-                <a href="#" >Inferno<br/>  <h6 class= "b"> Dan Brown</h6>
-              </h4>
-                
-              </div>
-            </div>
-          </div>
-        
-
-      <div class="col-lg-3 col-sm-6 mb-4" style = "height: 20rem;">
-          <div class="card h-100">
-            <a href="#"> <img class="card-img-top" src="https://www.planetadelibros.com/usuaris/libros/fotos/51/original/aleph_9788408104872.jpg" alt="" style = "height:14rem;"></a>
-            <div class="card-body">
-              <h4 class="card-title">
-                <a href="#" > El Aleph <br/>  <h6 tyle="font-size:10px;"> Paulo Coelho </h6> </a>
-              </h4>
-            
-            </div>
-            </div>
-          </div>
-        </div> <!--row-->
+	<div class="row">
+		<%@ include file = "BookList.jsp" %>
+	</div> <!--row-->
 
     <div>
     	<br><br><br>

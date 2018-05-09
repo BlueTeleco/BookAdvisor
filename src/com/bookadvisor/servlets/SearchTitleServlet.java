@@ -27,6 +27,7 @@ public class SearchTitleServlet extends HttpServlet {
 														.filter(book -> book.getTitulo().contains(query))
 														.collect(Collectors.toList());
 
-	    resp.sendRedirect(req.getContextPath() + "/iniciarsesion.jsp");
+		req.getSession().setAttribute("list_result", result);
+	    resp.sendRedirect(req.getContextPath() + "/Busqueda.jsp");
 	}
 }
