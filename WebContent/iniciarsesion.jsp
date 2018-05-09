@@ -34,13 +34,13 @@
 
   </head>
 
-  <body id="page-top">
+  <body id="page-top" style="background-color:black">
 
     <!-- Navigation -->
   	<%@ include file = "NavigationBar.jsp" %>
 
     <!-- Intro Header -->
-    <header class="masthead">
+    <header class="masthead"   >
       <div class="intro-body">
         <div class="container">
           <div class="row">
@@ -59,7 +59,7 @@
       </div>
     </header>
 
-  
+  <div style="background-color:white">
   <br><br><br><br>
   <section id="about" >
     <h1 class="media-heading">Inicia Sesión</h1>
@@ -73,7 +73,7 @@
       <%@ include file = "FormNewPublicista.jsp" %>
   </section>
 
-
+   
 
     <!-- Footer -->
     <footer>
@@ -81,7 +81,7 @@
         <p>Copyright &copy; ISST Grupo 7</p>
       </div>
     </footer>
-
+</div>
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
