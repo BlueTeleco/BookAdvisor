@@ -34,9 +34,9 @@
                 <!--left col-->
                 <ul class="list-group">
                     <li class="list-group-item text-muted" contenteditable="false">Perfil</li>
-                    <li class="list-group-item text-right"><span class="pull-left"><strong style="color:black">Nombre: ﻿${publicista.getNombre()}</strong></span></li>
-                    <li class="list-group-item text-right"><span class="pull-left"><strong style="color:black">Email: ﻿${publicista.getEmail()}</strong></span></li>
-                    <li class="list-group-item text-right"><span class="pull-left"><strong style="color:black">Url:﻿${publicista.getWeb()}</strong></span> ${publicista.url}</li>
+                    <li class="list-group-item text-right"><span><strong class="pull-left" style="color:black">Nombre: ﻿${publicista.getNombre()}</strong><button class="pull-right" id="button2" style="color:black">Editar</button></span> </li>
+                    <li class="list-group-item text-right"><span><strong class="pull-left" style="color:black">Email: ﻿${publicista.getEmail()}</strong><button class="pull-right" id="button2" style="color:black">Editar</button></span> </li>
+                    <li class="list-group-item text-right"><span><strong class="pull-left" style="color:black">Url:﻿${publicista.getWeb()}</strong><button class="pull-right" id="button2" style="color:black">Editar</button></span> ${publicista.url}</li>
                     <li class="list-group-item text-right"><span class="pull-left"><strong style="color:black">Role: Publicista</strong></span> Publicista
                    
 
