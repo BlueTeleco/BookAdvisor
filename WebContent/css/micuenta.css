@@ -25,6 +25,20 @@ h6 {
   text-transform: uppercase;
 }
 
+#button2 {
+	font-size: 12px;
+	background: #DCDCDC;
+     text-decoration: none;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: helvetica;
+    font-weight: 300;
+    color: #006505;
+    border-radius: 15px;
+    border: 3px black;
+}
+
 p {
   font-size: 16px;
   line-height: 1.5;
