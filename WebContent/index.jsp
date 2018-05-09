@@ -56,7 +56,7 @@
   
   	<form action="ReadFichaLibroServlet">
   		<input type="text" name="titulo" placeholder="Titulo > PresentacionFichaLibro.jsp" /> 
-  		<input type="submit">Presentacion ficha libro</input>
+  		<input id="button-submit" type="submit">Presentacion ficha libro</input>
   	</form>
 
 
