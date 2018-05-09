@@ -17,12 +17,13 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Critica implements Serializable {
 	
+	@Id
+	private String cuerpo;
 	
 	private String autor;
 	private String titulo;
-	@Id
-	private String cuerpo;
 	private String puntuacion;
+
 	@ManyToOne
 	private FichaLibro fl;
 	

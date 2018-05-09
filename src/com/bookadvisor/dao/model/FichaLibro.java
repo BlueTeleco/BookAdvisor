@@ -21,14 +21,11 @@ public class FichaLibro implements Serializable {
 	private String autor;
 	private String editorial;
 	
-	//@OneToMany(mappedBy = "fll", fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "fl", fetch = FetchType.LAZY)
 	private List<Exchange> exchanges; 
 
 	@OneToMany(mappedBy = "fl", fetch = FetchType.EAGER)
 	private List<Critica> criticas;
-
-	//@ElementCollection(targetClass=String.class) MOCK UP
-	//private List<String> bibliotecas;  
 
 	private String resenaEditorial;
 	private String categoria;
