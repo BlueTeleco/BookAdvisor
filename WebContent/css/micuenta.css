@@ -39,6 +39,20 @@ p {
   }
 }
 
+#button2 {
+	font-size: 12px;
+	background: #DCDCDC;
+	text-decoration: none;
+	padding: 3px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-family: helvetica;
+	font-weight: 300;
+	color: black;
+	border-radius: 15px;
+	border: 3px black;
+}
+
 a {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
