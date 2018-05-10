@@ -10,7 +10,7 @@
 	<div class="collapse navbar-collapse" id="navbarResponsive">
 	  <ul class="navbar-nav ml-auto">
 		<li class="nav-item">
-		  <a class="nav-link js-scroll-trigger" href="catalogo.jsp" onmouseover="this.style.color='orange';" onmouseout="this.style.color=''">Catálogo</a>
+		  <a class="nav-link js-scroll-trigger" href="CatalogoServlet" onmouseover="this.style.color='orange';" onmouseout="this.style.color=''">Catálogo</a>
 		</li>
 		<li class="nav-item">
 		  <a class="nav-link js-scroll-trigger" href="noticias.jsp" onmouseover="this.style.color='orange';" onmouseout="this.style.color=''">Tablón de noticias</a>

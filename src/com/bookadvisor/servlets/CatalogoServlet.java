@@ -22,7 +22,7 @@ public class CatalogoServlet extends HttpServlet {
 									.getInstance()
 									.getAll();
 
-		req.getSession().setAttribute("list_all", result);
+		req.getSession().setAttribute("list_result", result);
 	    resp.sendRedirect(req.getContextPath() + "/catalogo.jsp");
 	}
 }
