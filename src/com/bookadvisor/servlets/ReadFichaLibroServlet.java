@@ -18,12 +18,8 @@ public class ReadFichaLibroServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		request.getSession().removeAttribute("fl");
 		String titulo = request.getParameter("titulo");
-		System.out.println("getParameter(titulo) del input:"+titulo);
-		System.out.println("¿Esta fichas de libro vacio?: "+ (Boolean) FichaLibroDAOImplementation.getInstance().getAll().isEmpty());
 		FichaLibro fl = (FichaLibro) FichaLibroDAOImplementation.getInstance().read(titulo);
-		System.out.println("Ficha libro guardada en sesion con titulo: "+ fl.getTitulo());
 
 		request.getSession().setAttribute("fl", fl);
 		response.sendRedirect(request.getContextPath() + "/PresentacionFichaLibro.jsp");
