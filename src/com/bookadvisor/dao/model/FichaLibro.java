@@ -29,9 +29,6 @@ public class FichaLibro implements Serializable {
 	@OneToMany(mappedBy = "fl", fetch = FetchType.EAGER)
 	private List<Critica> criticas;
 
-	//@ElementCollection(targetClass=String.class) MOCK UP
-	//private List<String> bibliotecas;  
-
 	private String resenaEditorial;
 	private String categoria;
 	private Date date;
