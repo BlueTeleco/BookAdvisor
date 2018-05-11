@@ -24,10 +24,17 @@
 
     <!-- Custom styles for this template -->
     <link href="css/sesion.css" rel="stylesheet">
+    
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/ficha.css" rel="stylesheet">
+    <link href="css/footer.css.css" rel="stylesheet">
 
   </head>
 
-  <body id="page-top">
+  <body id="page-top" style="background-color:black">
 
     <!-- Navigation -->
   	<%@ include file = "NavigationBar.jsp" %>
@@ -52,7 +59,7 @@
       </div>
     </header>
 
-  
+  <div style="background-color:white">
   <br><br><br><br>
   <section id="about" >
     <h1 class="media-heading">Inicia Sesión</h1>
@@ -61,7 +68,7 @@
 
   <br><br><br>
   <section id="about" >
-      <h1 class="media-heading">O, si eres nuevo por aquí... ¡a qué esperas para registrarte! </h1>
+      <h1 class="media-heading">Registrarse </h1>
       <%@ include file = "FormNewUser.jsp" %>
       <%@ include file = "FormNewPublicista.jsp" %>
   </section>

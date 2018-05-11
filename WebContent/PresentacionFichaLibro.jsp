@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+ca<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -28,11 +28,11 @@
 	
 	</head>
  
- 	<body id="page-top">
+ 	<body id="page-top" style="background-color:black">
 	
 	    <!-- Navigation -->
 	  	<%@ include file = "NavigationBar.jsp" %>
-    <br><br><br>
+    <br><div style="background-color:white"><br><br>
 
     <div class="container" >
       <div id="home">
@@ -88,7 +88,7 @@
           <h5>  <strong style="color:#42DCA3">Autor/a del libro: </strong><h5> <c:out value="${fl.getAutor()}"/> </h5></h5> <br><br><br>
           <h5> <strong style="color:#42DCA3"> Editorial del libro: </strong> <h5> <c:out value="${fl.getEditorial()}"/> </h5></h5> <br><br><br>
           <h5> <strong style="color:#42DCA3"> Fecha de publicación de libro:</strong> <h5> <c:out value="${fl.getDate()}"/> </h5></h5> <br><br><br>
-          <h5> <strong  style="color:#42DCA3"> Categoría del libro:</strong> <h5> <c:out value="${fl.getCategoria()}"/> </h5><br><br>
+          
           
         </div>
         </div>
