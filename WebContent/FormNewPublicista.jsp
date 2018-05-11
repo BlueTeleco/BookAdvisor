@@ -47,7 +47,7 @@
 
                 <center>
 	            <span class="input-group-btn">
-                  <button class="btn btn-secondary" type="submit" style="margin:auto;width:50%;padding:10px">Crear publicista</button>
+                  <button class="btn btn-secondary" type="submit" style="margin:auto;width:50%;padding:10px; border-radius: 15px;">Crear publicista</button>
                 </span>
                 </center>
 

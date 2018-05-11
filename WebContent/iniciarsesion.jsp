@@ -12,12 +12,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>BookAdvisor - Iniciar Sesión</title>
+    <title>BA - Iniciar Sesión</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom fonts for this template -->
+    
+	   <!-- Custom fonts for this template -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
@@ -25,19 +25,14 @@
     <!-- Custom styles for this template -->
     <link href="css/sesion.css" rel="stylesheet">
     
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/ficha.css" rel="stylesheet">
-    <link href="css/footer.css.css" rel="stylesheet">
-
+  
   </head>
 
-  <body id="page-top" style="background-color:black">
+  <body id="page-top">
 
     <!-- Navigation -->
   	<%@ include file = "NavigationBar.jsp" %>
+
 
     <!-- Intro Header -->
     <header class="masthead">
@@ -47,31 +42,46 @@
             <div class="col-lg-8 mx-auto">
               <br><br><br><br>
               <h1 class="brand-heading">Iniciar Sesión</h1>
-              <p class="intro-text">
-                <br><h5 style= "font-size:27px;">BookAdvisor</h5>
-              </p>
-              <a href="#about" class="btn btn-circle js-scroll-trigger">
+              <p class="media-text" style= "font-size:27px;">
+                BookAdvisor</p>
+                <a href="#about" class="btn btn-circle js-scroll-trigger">
                 <i class="fa fa-angle-double-down animated"></i>
               </a>
+              
             </div>
           </div>
         </div>
       </div>
-    </header>
+    </header><br>
 
   <div style="background-color:white">
   <br><br><br><br>
   <section id="about" >
-    <h1 class="media-heading">Inicia Sesión</h1>
+    <h1 class="media-heading" style="text-align:center; color:black">Inicia Sesión</h1>
 	<%@ include file = "FormLogin.jsp" %>
-  </section>
+  </section> <br><br><br>
 
-  <br><br><br>
+  
   <section id="about" >
-      <h1 class="media-heading">Registrarse </h1>
-      <%@ include file = "FormNewUser.jsp" %>
-      <%@ include file = "FormNewPublicista.jsp" %>
+  <div class= "container">
+  <hr><br><br><br>
+      <h1 class="media-heading" style="text-align:center; color:black">¿Eres nuevo por aquí? </h1>
+  </div> <br>
+  </div>
+  <div style="background-color:lightgrey"> <br>
+  <div class="container">
+      <h2 class="media-heading" style="color:white;" >Registrarse como nuevo lector</h2>
+      </div>
+      <%@ include file = "FormNewUser.jsp" %> <br><br><br><br><br>
+      </div>
+   <div style="background-color:white">
+   <div class="container"> <br><br>
+      <h2 class="media-heading" style="color:black">Registrarse como nuevo publicista </h2>
+      <%@ include file = "FormNewPublicista.jsp" %> <br><br>
+   </div>
+       </div>
   </section>
+  
 
 
 

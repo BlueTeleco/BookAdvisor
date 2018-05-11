@@ -32,7 +32,7 @@
                 </div>
                 
                 <center>
-				<button type="submit" class="btn btn-primary">Iniciar Sesion</button>
+				<button type="submit" class="btn" style="border-radius: 15px; color:white; background-color:#42DCA3;">Iniciar Sesion</button>
 				</center>
 </div>
 </form>
