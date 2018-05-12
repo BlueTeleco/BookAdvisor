@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,33 +18,22 @@ import com.bookadvisor.dao.CriticaDAOImplementation;
 import com.bookadvisor.dao.model.Critica;
 import com.bookadvisor.dao.model.Lector;
 
-
 @WebServlet("/DataLectorServlet")
 public class DataLectorServlet extends HttpServlet {
 
-	@SuppressWarnings("null")
+	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		HttpSession sesionX = (HttpSession) request.getSession();
-		Lector lectorX = (Lector) sesionX.getAttribute("lectorX");
-		System.out.println("sesionX en DataLectorServlet: "+ sesionX.getAttribute("name"));
+		HttpSession sesion = (HttpSession) request.getSession();
+		Lector lector = (Lector) sesion.getAttribute("lector");
 
-		List<String> criticas_titulo = new ArrayList<String>() ;
-		List<Critica> criticas_list_aux = CriticaDAOImplementation.getInstance().getAll();
-		if(criticas_list_aux.size() > 0) {
-			for(Critica c: criticas_list_aux) {
-				if(c.getAutor().equals(lectorX.getNombre())) {
-					criticas_titulo.add(c.getTitulo()+": "+c.getTexto());
-				}
-			}
-			System.out.println("Numero de criticas de mi usuario: "+criticas_titulo.size()); 		
-		} else {	
-			System.out.println("No hay criticas: "+criticas_titulo.size()); 
-		}
+		List<String> criticas_titulo = CriticaDAOImplementation.getInstance()
+															   .getAll()
+															   .stream()
+															   .filter(crit -> crit.getAutor().equals(lector.getNombre()))
+															   .map(crit -> crit.getTitulo() + ": " + crit.getTexto())
+															   .collect(Collectors.toList());
+
 		request.getSession().setAttribute("criticas_list", criticas_titulo);
-		System.out.println("DataLectorServlet > mis criticas: "+ sesionX.getAttribute("criticas_list"));
-
 		response.sendRedirect(request.getContextPath()+ "/DatosLector.jsp");
-		
 	}
 }

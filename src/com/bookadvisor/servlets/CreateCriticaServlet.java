@@ -41,17 +41,6 @@ public class CreateCriticaServlet extends HttpServlet {
 		fl.setCriticas(lista);
 		FichaLibroDAOImplementation.getInstance().update(fl);
 							
-		
-		System.out.println("autor: " +autor.getNombre());
-		System.out.println("esta vacio? "+ CriticaDAOImplementation.getInstance().read(autor.getNombre()));
-		System.out.println("critica "+CriticaDAOImplementation.getInstance());
-		System.out.println("getAll Criticas: "+CriticaDAOImplementation.getInstance().getAll());
-		System.out.println("fl session Criticas: "+ fl.getCriticas());
-
-
 		response.sendRedirect(request.getContextPath()+"/PresentacionFichaLibro.jsp");
-
 	}
-	
-
 }

@@ -34,7 +34,6 @@ public class FichaLibro implements Serializable {
 	private Date date;
 	
 	public FichaLibro() {
-		//this.bibliotecas = new ArrayList<>();
 		this.criticas = new ArrayList<>();
 		this.exchanges = new HashSet<>();
 	}
@@ -104,15 +103,6 @@ public class FichaLibro implements Serializable {
 	}
 	*/
 
-//	public List<String> getBibliotecas() {  MOCK UP
-//		return bibliotecas;
-//	}
-//
-//	public FichaLibro setBibliotecas(List<String> bibliotecas) {  MOCK UP
-//		this.bibliotecas = bibliotecas;
-//		return this;
-//	}
-	
 	public List<Critica> getCriticas() {
 		return this.criticas;
 	}

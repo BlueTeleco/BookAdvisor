@@ -13,11 +13,9 @@ import com.bookadvisor.dao.model.FichaLibro;
 
 @WebServlet("/ReadFichaLibroServlet")
 public class ReadFichaLibroServlet extends HttpServlet {
-       
 	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
 		String titulo = request.getParameter("titulo");
 		FichaLibro fl = (FichaLibro) FichaLibroDAOImplementation.getInstance().read(titulo);
 

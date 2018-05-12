@@ -24,13 +24,11 @@ public class LoginServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
 		String email = req.getParameter("email");
 		String password = req.getParameter("password");
 
 		Lector lector = LectorDAOImplementation.getInstance().login(email, password);
 		Libreria publicista = LibreriaDAOImplementation.getInstance().login(email, password);
-
 		Cookie ck = null;
 		
 		if (ADMIN_EMAIL.equals(email) && ADMIN_PASSWORD.equals(password) ) {

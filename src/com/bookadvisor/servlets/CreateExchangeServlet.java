@@ -23,26 +23,28 @@ public class CreateExchangeServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Exchange ex = new Exchange();
-		Lector l = new Lector();
+		String estado = request.getParameter("estado");
+		String ISBN = request.getParameter("ISBN");
+		String info = request.getParameter("info");
+		String formato = request.getParameter("formato");
+
 		FichaLibro fl = (FichaLibro) request.getSession().getAttribute("fl");
 
-		l = (Lector) request.getSession().getAttribute("lector");
-		ex.setEstado(request.getParameter("estado"));
-		ex.setISBN(request.getParameter("ISBN"));
-		ex.setInfo(request.getParameter("info"));
-		ex.setFormato(request.getParameter("formato"));
-		ex.setEmail(l.getEmail());
-		ex.setFl(fl);
+		Lector lector = (Lector) request.getSession().getAttribute("lector");
+		Exchange ex = new Exchange()
+							.setEstado(estado)
+							.setISBN(ISBN)
+							.setInfo(info)
+							.setFormato(formato)
+							.setEmail(lector.getEmail())
+							.setFl(fl);
 		
 		ExchangeDAOImplementation.getInstance().create(ex);
-		
 
 		Set<Exchange> lista = fl.getExchanges();
 		lista.add(ex);
 		fl.setExchanges(lista);
 		FichaLibroDAOImplementation.getInstance().update(fl);
-							
 
 		response.sendRedirect(request.getContextPath()+"/PresentacionFichaLibro.jsp");
 	}

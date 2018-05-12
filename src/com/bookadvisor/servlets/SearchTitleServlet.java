@@ -24,9 +24,9 @@ public class SearchTitleServlet extends HttpServlet {
 		List<FichaLibro> result = FichaLibroDAOImplementation
 														.getInstance()
 														.getAll()
-														.stream() //los pasa de lista a collection
+														.stream()
 														.filter(book -> book.getTitulo().contains(query))
-														.collect(Collectors.toList()); //de collection a lista
+														.collect(Collectors.toList());
 
 		req.getSession().setAttribute("list_result", result);
 	    resp.sendRedirect(req.getContextPath() + "/Busqueda.jsp");

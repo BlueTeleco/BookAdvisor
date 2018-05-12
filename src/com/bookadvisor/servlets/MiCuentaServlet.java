@@ -22,7 +22,6 @@ public class MiCuentaServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
 		Lector lector = (Lector) req.getSession().getAttribute("lector");
 		Libreria publicista = (Libreria) req.getSession().getAttribute("publicista");
 		
