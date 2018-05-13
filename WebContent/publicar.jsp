@@ -84,21 +84,12 @@
     <h4><strong>Publicar una nueva entrada: </strong></h4> 
     <br>
     </div>
-
-		<%	Cookie[] cookies2 = request.getCookies();
-			if (cookies != null) {
-				for (int i = 0; i < cookies.length; i++) {
-					if (cookies[i].getName().equals("user")) {
-						if (cookies[i].getValue().equals("lector")) {%>
-							 <%@ include file = "FormNewFichaLibro.jsp" %>	
-					<%  } else if (cookies[i].getValue().equals("publicista")) {%>
-								 <%@ include file = "FormNewNoticia.jsp" %><% 
-						}  
-					}
-				}
-			}
-		%>
-   
+		<c:if test="${lector != null}">
+			<%@ include file = "FormNewFichaLibro.jsp" %>	
+		</c:if>
+		<c:if test="${publicista != null}">
+			<%@ include file = "FormNewNoticia.jsp" %>
+		</c:if>
     <br><br><br>
 
     <!-- Footer -->

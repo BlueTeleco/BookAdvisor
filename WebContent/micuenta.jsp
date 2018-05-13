@@ -54,26 +54,12 @@
   <section id="about" >
     </section>
     <br><br>
-    
-    <%
-    	if (found) {
-			for (int i = 0; i < cookies.length; i++) {
-				if (cookies[i].getValue().equals("lector")) {
-	%>
-
-					<%@ include file = "DatosLector.jsp" %>
-	
-	<%
-				} else if (cookies[i].getValue().equals("publicista")) {
-	%>
-
-					<%@ include file = "DatosPublicista.jsp" %>
-	
-	<%
-				}
-			}
-    	}
-    %>
+	<c:if test="${lector != null}">
+		<%@ include file = "DatosLector.jsp" %>
+	</c:if>
+	<c:if test="${publicista != null}">
+		<%@ include file = "DatosPublicista.jsp" %>
+	</c:if>
      
     <br><br><br>
     <center>
