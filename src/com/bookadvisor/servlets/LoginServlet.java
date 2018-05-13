@@ -19,8 +19,6 @@ import com.bookadvisor.dao.model.Libreria;
 
 @WebServlet ("/LoginServlet")
 public class LoginServlet extends HttpServlet {
-	private final String ADMIN_EMAIL = "root";
-	private final String ADMIN_PASSWORD = "root";
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -29,22 +27,12 @@ public class LoginServlet extends HttpServlet {
 
 		Lector lector = LectorDAOImplementation.getInstance().login(email, password);
 		Libreria publicista = LibreriaDAOImplementation.getInstance().login(email, password);
-		Cookie ck = null;
 		
-		if (ADMIN_EMAIL.equals(email) && ADMIN_PASSWORD.equals(password) ) {
-			ck = new Cookie("user", "root");
-			resp.addCookie(ck);
-			resp.sendRedirect(req.getContextPath() + "/index.jsp");
-
-		} else if (null != lector) {
-			ck = new Cookie("user", "lector");
-			resp.addCookie(ck);
+		if (null != lector) {
 			req.getSession().setAttribute("lector", lector);
 			resp.sendRedirect(req.getContextPath() + "/index.jsp");
 
 		} else if (null != publicista) {
-			ck = new Cookie("user", "publicista");
-			resp.addCookie(ck);
 			req.getSession().setAttribute("publicista", publicista );
 			resp.sendRedirect(req.getContextPath() + "/index.jsp");
 

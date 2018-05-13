@@ -14,30 +14,19 @@
 		<li class="nav-item">
 		  <a class="nav-link js-scroll-trigger" href="noticias.jsp" onmouseover="this.style.color='orange';" onmouseout="this.style.color=''">Tablón de noticias</a>
 		</li>
-		
-		<%		
-			Cookie[] cookies = request.getCookies();
-			boolean found = false;
-			if (cookies != null) {
-				for (int i = 0; i < cookies.length; i++) {
-					if (cookies[i].getName().equals("user")) {
-						out.println("<li class=\"nav-item\">"+
-									"<a class=\"nav-link js-scroll-trigger\" href=\"MiCuentaServlet\" onmouseover=\"this.style.color='orange';\" onmouseout=\"this.style.color=''\">Mi Cuenta</a>"+
-									"</li>"+
-									"<li class=\"nav-item\">"+
-									"<a class=\"nav-link js-scroll-trigger\" href=\"publicar.jsp\" onmouseover=\"this.style.color='orange';\" onmouseout=\"this.style.color=''\">Publicar</a>"+
-									"</li>");
-						found = true;
-						break;
-					}
-				}
-			}
-			if (!found) {
-				out.println("<li class=\"nav-item\">"+
-							"<a class=\"nav-link js-scroll-trigger\" href=\"iniciarsesion.jsp\" onmouseover=\"this.style.color='orange';\" onmouseout=\"this.style.color=''\">Iniciar Sesión / Registrarse</a>"+
-							"</li>");
-			}
-		%>
+		<c:if test="${lector != null || publicista != null}">
+			<li class="nav-item">
+				<a class="nav-link js-scroll-trigger" href="MiCuentaServlet" onmouseover="this.style.color='orange';" onmouseout="this.style.color=''">Mi Cuenta</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link js-scroll-trigger" href="publicar.jsp" onmouseover="this.style.color='orange';" onmouseout="this.style.color=''">Publicar</a>
+			</li>
+		</c:if>
+		<c:if test="${lector == null && publicista == null}">
+				<li class="nav-item">
+					<a class="nav-link js-scroll-trigger" href="iniciarsesion.jsp" onmouseover="this.style.color='orange';" onmouseout="this.style.color=''">Iniciar Sesión / Registrarse</a>
+				</li>
+		</c:if>
 		
 	  </ul>
 	</div>
