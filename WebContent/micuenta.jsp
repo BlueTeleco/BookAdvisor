@@ -39,11 +39,11 @@
           <div class="row">
             <div class="col-lg-8 mx-auto">
               <br><br><br><br>
-              <h1 class="brand-heading">Mi cuenta</h1>
+              <h1 class="brand-heading" style="color:black;">Mi cuenta</h1>
               <p class="intro-text">
-                <br><h5 style= "font-size:27px;">BookAdvisor</h5></p>
+                <br><h5 style= "font-size:27px; color:black;">BookAdvisor</h5></p>
               <a href="#about" class="btn btn-circle js-scroll-trigger">
-                <i class="fa fa-angle-double-down animated"></i>
+                <i class="fa fa-angle-double-down animated" style="color:black;"></i>
               </a>
             </div>
           </div>

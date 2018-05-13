@@ -78,7 +78,7 @@ ca<%@ page language="java" contentType="text/html; charset=UTF-8"
         <div class="col-lg-5">
         	<div class="container">
         	<br>
-        	<img class="img-fluid rounded" src=ServeImageServlet style = "height:37rem;"></a>
+        	<img class="img-fluid rounded" src="ServeImageServlet?titulo=${fl.getTitulo()}" style = "height:37rem;"></a>
 			</div></div>
 		       
         <!-- /.col-lg-8 -->
