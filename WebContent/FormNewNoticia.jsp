@@ -9,17 +9,21 @@
             <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
                 <span class="label-input100">Autor *</span>
                 <input class="input100" type="hidden" name="pub_name" value="${publicista.getNombre()}" >
-            </div>
+            </div> <br>
             <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
                 <span class="label-input100">Titulo *</span>
                 <input class="input100" type="text" name="titulo" placeholder="Titulo">
-            </div>
-           <div class="wrap-input100 validate-input bg0 rs1-alert-validate" data-validate = "Please Type Your Message">
+            </div> <br>
+           <div class="wrap-input100 validate-input bg0 rs1-alert-validate rs1-wrap-input100" data-validate = "Please Type Your Message">
                 <span class="label-input100">Descripcion</span>
                 <textarea class="input100" name="message" placeholder="Desarrollo de la noticia"></textarea>
-            </div>
-
+            </div> <br>
             
+            <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" >
+                <span class="label-input100">Selecciona una foto para tu ficha *</span><br><br>
+                 <input type="file" name="file" accept="image/*">
+     </div> <br>
+
             </center>
 
             

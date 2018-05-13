@@ -13,6 +13,7 @@ import java.util.Set;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.OneToMany;
 
 @Entity
@@ -22,6 +23,9 @@ public class FichaLibro implements Serializable {
 	private String titulo;
 	private String autor;
 	private String editorial;
+	
+	@Lob 
+	private byte[] image;
 	
 	@OneToMany(mappedBy = "fl", fetch = FetchType.EAGER)
 	private Set<Exchange> exchanges; 
@@ -34,6 +38,7 @@ public class FichaLibro implements Serializable {
 	private Date date;
 	
 	public FichaLibro() {
+		
 		this.criticas = new ArrayList<>();
 		this.exchanges = new HashSet<>();
 	}
@@ -92,17 +97,16 @@ public class FichaLibro implements Serializable {
 		return this;
 	}
 	
-	/*
-	public Image getImagen() {
-		return imagen;
+	
+	public byte[] getImagen() {
+		return image;
 	}
 	
-	public FichaLibro setImagen(Image imagen) {
-		this.imagen = imagen;
+	public FichaLibro setImagen(byte[] image) {
+		this.image = image;
 		return this;
 	}
-	*/
-
+	
 	public List<Critica> getCriticas() {
 		return this.criticas;
 	}

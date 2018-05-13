@@ -78,8 +78,7 @@ ca<%@ page language="java" contentType="text/html; charset=UTF-8"
         <div class="col-lg-5">
         	<div class="container">
         	<br>
-        
-			<img class="img-fluid rounded" src="https://imagessl1.casadellibro.com/a/l/t0/71/9788408141471.jpg" alt="" style = "height:37rem;">        
+        	<img class="img-fluid rounded" src=ServeImageServlet style = "height:37rem;"></a>
 			</div></div>
 		       
         <!-- /.col-lg-8 -->
@@ -136,7 +135,6 @@ ca<%@ page language="java" contentType="text/html; charset=UTF-8"
 				<input type="radio" name="rating" value="4/5">4/5</input>
 				<input type="radio" name="rating" value="5/5">5/5</input>
 			</span> <br><br>
-           <noscript>Necesitas tener habilitado javascript para poder votar</noscript>
                 <input class="btn btn-primary" type="submit" value="Crear nueva crítica" style="background-color:#42DCA3;"></input>
               </form>
               </div>
