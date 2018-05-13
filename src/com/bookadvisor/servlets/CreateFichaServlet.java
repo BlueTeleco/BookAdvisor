@@ -46,7 +46,6 @@ public class CreateFichaServlet extends HttpServlet {
 		}
 		
 		DateFormat df = new SimpleDateFormat("dd/MM/yyyy", Locale.FRENCH);
-		
 		try {
 			Date date = df.parse(fecha);
 			FichaLibro libro = new FichaLibro()
@@ -58,7 +57,6 @@ public class CreateFichaServlet extends HttpServlet {
 									.setImagen(output.toByteArray())
 									.setResEdit(resenaEditorial);
 			 
-			
 			FichaLibroDAOImplementation.getInstance().create(libro);
 			resp.sendRedirect(req.getContextPath() + "/index.jsp");
 		} catch (ParseException e) {

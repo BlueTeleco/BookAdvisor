@@ -37,7 +37,4 @@
 	                  <button class="btn btn-secondary" type="submit" style="align:center; border-radius: 15px;">Crear lector</button>
 	                </span>
                 </center>
-
-
-
 </form>

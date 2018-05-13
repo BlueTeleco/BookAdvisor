@@ -87,16 +87,12 @@ ca<%@ page language="java" contentType="text/html; charset=UTF-8"
           <h5>  <strong style="color:#42DCA3">Autor/a del libro: </strong><h5> <c:out value="${fl.getAutor()}"/> </h5></h5> <br><br><br>
           <h5> <strong style="color:#42DCA3"> Editorial del libro: </strong> <h5> <c:out value="${fl.getEditorial()}"/> </h5></h5> <br><br><br>
           <h5> <strong style="color:#42DCA3"> Fecha de publicación de libro:</strong> <h5> <c:out value="${fl.getDate()}"/> </h5></h5> <br><br><br>
-          
-          
         </div>
         </div>
         <!-- /.col-md-4 -->
       
           
           <br><br>
-         
-
           <!-- Post Content -->
            <hr>
 		<h5> <strong  style="color:#42DCA3"> Reseña de la editorial: </strong> </h5> <br><br>
@@ -106,15 +102,11 @@ ca<%@ page language="java" contentType="text/html; charset=UTF-8"
         </div>
       </div>
     </div>
-  
-
 
   <!-- fORMULARIO DE CRITICAS -->
     <div  class="tab-pane fade" id="nav-critica" role="tabpanel" aria-labelledby="nav-critica-tab">
           <!-- Comments Form -->
           <br><br><br><br>
-          
-          
            
           <div>
           <div class="card my-4">
@@ -267,10 +259,6 @@ ca<%@ page language="java" contentType="text/html; charset=UTF-8"
             </div>
             
             <br> <hr><br><br><br><br><br>
-
-            
-
-              
             </div>
           </div>
             </div>
@@ -294,7 +282,5 @@ ca<%@ page language="java" contentType="text/html; charset=UTF-8"
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
   </body>
-
 </html>

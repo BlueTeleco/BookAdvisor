@@ -29,8 +29,8 @@ public class CreateExchangeServlet extends HttpServlet {
 		String formato = request.getParameter("formato");
 
 		FichaLibro fl = (FichaLibro) request.getSession().getAttribute("fl");
-
 		Lector lector = (Lector) request.getSession().getAttribute("lector");
+
 		Exchange ex = new Exchange()
 							.setEstado(estado)
 							.setISBN(ISBN)
@@ -48,6 +48,4 @@ public class CreateExchangeServlet extends HttpServlet {
 
 		response.sendRedirect(request.getContextPath()+"/PresentacionFichaLibro.jsp");
 	}
-
-
 }

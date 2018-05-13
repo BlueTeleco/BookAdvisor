@@ -4,8 +4,8 @@
 
 	<span class="contact100-form-title">
 					Ficha
-				</span>
-<center>
+	</span>
+	<center>
             <div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate="Please Type Your Name">
                 <span class="label-input100">Título *</span>
                 <input class="input100" ﻿type="text" name="titulo" placeholder="Titulo del libro"o">
@@ -26,7 +26,6 @@
                 <input class="input100" ﻿type="text" name="editorial" placeholder="Editorial del libro">
             </div>
             <br>
-
 
             <div class="wrap-input100 input100-select bg1 rs1-wrap-input100">
                 <span class="label-input100">Categoría *</span>

@@ -2,13 +2,8 @@
     pageEncoding="UTF-8"%>
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700">
 
-<form action="LoginServlet">
-<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700">
-
 <form action="LoginServlet"  >
 	<div id="login" style="margin:auto;width:50%;padding:10px">
-	
-
                 <!--Email-->
                 <div class="form-group">
                     <label for="email" class="cols-sm-2 control-label">Email</label>
@@ -35,7 +30,6 @@
 				<button type="submit" class="btn" style="border-radius: 15px; color:white; background-color:#42DCA3;">Iniciar Sesion</button>
 				</center>
 </div>
-</form>
 </form>
 
 

@@ -79,21 +79,15 @@
     <center>
     <h4>Cerrar Sesión</h4>
       <%@ include file = "FormLogout.jsp" %>
-      </center>
+    </center>
     <br><br><br><br><br><br><br><br>
     
     <br><br><br>
-
-
-
     <!-- Footer -->
     <footer>
       <div class="container text-center">
         <p>Copyright &copy; ISST Grupo 7</p>
       </div>
     </footer>
-
-
   </body>
-
 </html>
