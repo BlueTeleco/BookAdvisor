@@ -58,6 +58,11 @@
   <br><br><br><br>
   <section id="about" >
     <h1 class="media-heading" style="text-align:center; color:black">Inicia Sesión</h1>
+    <h1 class="media-heading" style="text-align:center" > 
+    <img src="https://lh6.googleusercontent.com/-CYt37hfDnQ8/T3nNydojf_I/AAAAAAAAAr0/P5OtlZxV4rk/s32/facebook32.png" width=32 height=32 />
+    <img src="https://lh6.googleusercontent.com/--aIk2uBwEKM/T3nN1x09jBI/AAAAAAAAAs8/qzDsbw3kEm8/s32/twitter32.png" width=32 height=32 />
+    <img src="https://lh5.googleusercontent.com/-F_FBKktZWZk/T3nN0v4FeAI/AAAAAAAAAsc/7dHTxkxn4cI/s32/google32.png" width=32 height=32  />
+    </h1>
 	<%@ include file = "FormLogin.jsp" %>
   </section> <br><br><br>
 
