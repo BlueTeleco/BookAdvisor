@@ -80,7 +80,10 @@
     <section id="about" >
     </section>
     <br><br><br>
-    <h4 >Publicar una nueva entrada: </h4>
+    <div class= container">
+    <h4><strong>Publicar una nueva entrada: </strong></h4> 
+    <br>
+    </div>
 
 		<%	Cookie[] cookies2 = request.getCookies();
 			if (cookies != null) {

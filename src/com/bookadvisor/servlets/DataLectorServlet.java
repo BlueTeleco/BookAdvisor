@@ -1,6 +1,7 @@
 package com.bookadvisor.servlets;
 
 import java.io.IOException;
+import java.util.stream.Collectors;
 
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -21,7 +22,6 @@ import com.bookadvisor.dao.model.Lector;
 @WebServlet("/DataLectorServlet")
 public class DataLectorServlet extends HttpServlet {
 
-	@SuppressWarnings("null")
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		HttpSession sesionX = (HttpSession) request.getSession();

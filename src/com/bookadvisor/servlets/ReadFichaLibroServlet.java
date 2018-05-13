@@ -21,6 +21,7 @@ public class ReadFichaLibroServlet extends HttpServlet {
 		String titulo = request.getParameter("titulo");
 		FichaLibro fl = (FichaLibro) FichaLibroDAOImplementation.getInstance().read(titulo);
 
+		//response.getOutputStream().write(fl.getImage());
 		request.getSession().setAttribute("fl", fl);
 		response.sendRedirect(request.getContextPath() + "/PresentacionFichaLibro.jsp");
 	}
