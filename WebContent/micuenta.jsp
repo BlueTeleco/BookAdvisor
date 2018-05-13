@@ -75,9 +75,11 @@
     	}
     %>
      
-    <br><br>
-    <h4>Logout</h4>
+    <br><br><br>
+    <center>
+    <h4>Cerrar Sesión</h4>
       <%@ include file = "FormLogout.jsp" %>
+      </center>
     <br><br><br><br><br><br><br><br>
     
     <br><br><br>

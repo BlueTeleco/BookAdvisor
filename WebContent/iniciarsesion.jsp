@@ -68,15 +68,15 @@
       <h1 class="media-heading" style="text-align:center; color:black">¿Eres nuevo por aquí? </h1>
   </div> <br>
   </div>
-  <div style="background-color:lightgrey"> <br>
+  <div style="background-color:lightgrey"> <br><br>
   <div class="container">
-      <h2 class="media-heading" style="color:white;" >Registrarse como nuevo lector</h2>
+      <h2 class="media-heading" style="color:white; text-align:center" >Registrarse como nuevo lector</h2>
       </div>
       <%@ include file = "FormNewUser.jsp" %> <br><br><br><br><br>
       </div>
    <div style="background-color:white">
-   <div class="container"> <br><br>
-      <h2 class="media-heading" style="color:black">Registrarse como nuevo publicista </h2>
+   <div class="container"> <br><br><br>
+      <h2 class="media-heading" style="color:black; text-align:center">Registrarse como nuevo publicista </h2>
       <%@ include file = "FormNewPublicista.jsp" %> <br><br>
    </div>
        </div>
