@@ -38,7 +38,6 @@ public class FichaLibro implements Serializable {
 	private Date date;
 	
 	public FichaLibro() {
-		
 		this.criticas = new ArrayList<>();
 		this.exchanges = new HashSet<>();
 	}
@@ -97,7 +96,6 @@ public class FichaLibro implements Serializable {
 		return this;
 	}
 	
-	
 	public byte[] getImagen() {
 		return image;
 	}
@@ -124,5 +122,4 @@ public class FichaLibro implements Serializable {
 		this.exchanges = exchanges;
 		return this;
 	}
-	
 }

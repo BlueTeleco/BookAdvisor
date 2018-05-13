@@ -39,5 +39,4 @@ public class Biblioteca implements Serializable {
 		this.localizacion = localizacion;
 		return this;
 	}
-
 }

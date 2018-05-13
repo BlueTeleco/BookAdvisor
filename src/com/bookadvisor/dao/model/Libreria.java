@@ -13,9 +13,11 @@ public class Libreria implements Serializable {
 	
 	@Id
 	private String email;
+
 	private String nombre;
 	private String web;
 	private String password;
+
 	@OneToMany(mappedBy = "autor", fetch = FetchType.EAGER)
 	private List<Noticia> promociones;
 	
@@ -63,5 +65,4 @@ public class Libreria implements Serializable {
 		this.promociones = promociones;
 		return this;
 	}
-	
 }

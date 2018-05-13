@@ -21,5 +21,4 @@ public class ServeImageServlet extends HttpServlet {
 		FichaLibro fl = FichaLibroDAOImplementation.getInstance().read(titulo);
 		resp.getOutputStream().write(fl.getImagen());
 	}
-
 }

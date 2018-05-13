@@ -35,6 +35,7 @@ public class MiCuentaServlet extends HttpServlet {
 
 			req.getSession().setAttribute("criticas_list", criticas_titulo);
 			resp.sendRedirect(req.getContextPath()+ "/micuenta.jsp");
+
 		} else if (publicista != null) {
 			List<Noticia> noticias_titulo = NoticiaDAOImplementation
 												.getInstance()

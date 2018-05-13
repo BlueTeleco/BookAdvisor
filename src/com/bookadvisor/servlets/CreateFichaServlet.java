@@ -35,9 +35,9 @@ public class CreateFichaServlet extends HttpServlet {
 		String categoria = req.getParameter("categoria");
 		String fecha = req.getParameter("fecha");
 		String resenaEditorial = req.getParameter("resenaEditorial");
-		// FILE UPLOAD: subida de ficheros
-		Part filePart = req.getPart("file"); // Extrae el contenido almacenado en el campo (part) que contenga el nombre especificado
-		InputStream fileContent = filePart.getInputStream(); // Extrae el contenido de ese fichero vinculado al input que contenía la part especificada
+
+		Part filePart = req.getPart("file");
+		InputStream fileContent = filePart.getInputStream();
 		ByteArrayOutputStream output = new ByteArrayOutputStream();
 				
 		byte[] buffer = new byte[250000];

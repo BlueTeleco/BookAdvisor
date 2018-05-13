@@ -1,15 +1,7 @@
 
 package com.bookadvisor.dao.model;
 
-import java.awt.Image;
-
-
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
-import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
@@ -60,10 +52,12 @@ public class Critica implements Serializable {
 		this.cuerpo = cuerpo;
 		return this;
 	}
+
 	public Critica setAutor(String autor) {
 		this.autor = autor;
 		return this;
 	}
+
 	public Critica setTitulo(String titulo) {
 		this.titulo = titulo;
 		return this;
@@ -73,6 +67,4 @@ public class Critica implements Serializable {
 		this.puntuacion = puntuacion;
 		return this;
 	}
-
-
 }

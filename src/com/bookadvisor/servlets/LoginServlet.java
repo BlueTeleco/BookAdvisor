@@ -52,5 +52,4 @@ public class LoginServlet extends HttpServlet {
 			resp.sendRedirect(req.getContextPath() + "/iniciarsesion.jsp");
 		}
 	}
-
 }

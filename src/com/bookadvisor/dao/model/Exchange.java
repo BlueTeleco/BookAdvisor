@@ -72,5 +72,4 @@ public class Exchange implements Serializable {
 		this.estado = estado;
 		return this;
 	}
-
 }

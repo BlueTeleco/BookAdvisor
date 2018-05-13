@@ -9,11 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.bookadvisor.dao.LectorDAOImplementation;
-import com.bookadvisor.dao.LibreriaDAOImplementation;
-import com.bookadvisor.dao.model.Lector;
-import com.bookadvisor.dao.model.Libreria;
-
 @WebServlet ("/LogoutServlet")
 public class LogoutServlet extends HttpServlet {
 	
@@ -32,5 +27,4 @@ public class LogoutServlet extends HttpServlet {
 			resp.sendRedirect(req.getContextPath() + "/index.jsp");
 		}
 	}
-
 }

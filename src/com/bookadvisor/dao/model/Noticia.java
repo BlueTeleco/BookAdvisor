@@ -42,5 +42,4 @@ public class Noticia implements Serializable {
 		this.cuerpo = cuerpo;
 		return this;
 	}
-
 }

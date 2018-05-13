@@ -2,8 +2,6 @@ package com.bookadvisor.servlets;
 
 import java.io.IOException;
 
-import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -15,7 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.bookadvisor.dao.CriticaDAOImplementation;
-import com.bookadvisor.dao.model.Critica;
 import com.bookadvisor.dao.model.Lector;
 
 @WebServlet("/DataLectorServlet")

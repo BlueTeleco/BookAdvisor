@@ -39,5 +39,4 @@ public class Lector implements Serializable {
 		this.password = password;
 		return this;
 	}
-	
 }
